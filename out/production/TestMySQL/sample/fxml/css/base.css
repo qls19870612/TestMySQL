@@ -1,0 +1,21 @@
+.root
+{
+
+    -fx-background-repeat: no-repeat;
+    -fx-background-color: beige;
+    -fx-background-image: url("cry.png");
+    -fx-background-position: bottom;
+
+}
+.label{
+    -fx-effect: dropshadow(three-pass-box, red, 10, 1.0, 100, 100);
+    -fx-font-weight: normal;
+    -fx-font-size: 14pt;
+}
+
+#linkTxt {
+    -fx-font-size: 16px;
+    -fx-font-family: "Arial Black";
+    -fx-fill: #818181;
+    -fx-effect: innershadow( three-pass-box , rgba(0,0,0,0.7) , 6, 0.0 , 0 , 2 );
+}

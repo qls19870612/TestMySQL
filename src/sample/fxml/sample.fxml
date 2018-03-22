@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?language javascript?>
+<?import java.net.URL?>
+<Pane prefHeight="333" prefWidth="337" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.PanelController" styleClass="root">
+   <children>
+      <VBox nodeOrientation="RIGHT_TO_LEFT" prefHeight="293.0" prefWidth="60.0" spacing="18.0" layoutY="10">
+         <children>
+            <Label text="ip:" />
+            <Label text="username:" />
+            <Label text="pwd:" />
+         </children>
+
+         </VBox>
+      <VBox layoutX="91.0" prefHeight="244.0" prefWidth="192.0" spacing="10.0" layoutY="10">
+         <children>
+            <TextField fx:id="ip" prefHeight="20.0" prefWidth="193.0" />
+            <TextField fx:id="username"/>
+            <TextField fx:id="pwd" />
+            <Button contentDisplay="RIGHT" mnemonicParsing="false" onMouseClicked="#onClickBtn" prefHeight="23.0" prefWidth="88.0" text="生成表结构" />
+         </children>
+      </VBox>
+      <Hyperlink fx:id="linkTxt" onMouseClicked="#onClickHyperLink" layoutX="247.0" layoutY="268.0"  prefHeight="21.0" prefWidth="82.0" text="History" />
+      <ListView fx:id="historyList" layoutX="5.0" layoutY="147.0" prefHeight="116.0" prefWidth="326.0"
+                onMouseClicked="#onClickList"/>
+
+      </children>
+   <stylesheets>
+      <URL value="@css/base.css"></URL>
+   </stylesheets>
+
+</Pane>

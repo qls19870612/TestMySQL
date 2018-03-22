@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="org.apache.servicemix.bundles.httpcore-4.0-alpha6_1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/org.apache.servicemix.bundles.httpcore-4.0-alpha6_11.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

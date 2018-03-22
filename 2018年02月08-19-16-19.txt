@@ -1,0 +1,1071 @@
+MySQL Connector Java
+5.7
+0
+4
+--------------dbNames------------
+agent_platform
+dbadmin
+ifpay_risk
+ifpay_security
+information_schema
+mysql
+performance_schema
+recondb
+sys
+test
+--------------tableNames------------
+start------dbName:agent_platform------
+account
+accounttransaction
+agent
+agentglobalservicecfg
+agentnew
+agentrole
+bankcard
+company
+liquidation
+merchant
+operatelog
+productcontract
+productfeerule
+servicecaptchacode
+settle
+trade
+user
+withdraw
+end------dbName:agent_platform------
+start------dbName:dbadmin------
+schema_version
+end------dbName:dbadmin------
+start------dbName:ifpay_risk------
+agentpay_risk_info
+merchant_risk_info
+pay_risk_info
+end------dbName:ifpay_risk------
+start------dbName:ifpay_security------
+security_merchant_key
+end------dbName:ifpay_security------
+start------dbName:information_schema------
+end------dbName:information_schema------
+start------dbName:mysql------
+end------dbName:mysql------
+start------dbName:performance_schema------
+end------dbName:performance_schema------
+start------dbName:recondb------
+acquire_trade
+agentpay_trade
+recon_exp
+recon_import
+recon_result
+end------dbName:recondb------
+start------dbName:sys------
+sys_config
+host_summary
+host_summary_by_file_io
+host_summary_by_file_io_type
+host_summary_by_stages
+host_summary_by_statement_latency
+host_summary_by_statement_type
+innodb_buffer_stats_by_schema
+innodb_buffer_stats_by_table
+innodb_lock_waits
+io_by_thread_by_latency
+io_global_by_file_by_bytes
+io_global_by_file_by_latency
+io_global_by_wait_by_bytes
+io_global_by_wait_by_latency
+latest_file_io
+memory_by_host_by_current_bytes
+memory_by_thread_by_current_bytes
+memory_by_user_by_current_bytes
+memory_global_by_current_bytes
+memory_global_total
+metrics
+processlist
+ps_check_lost_instrumentation
+schema_auto_increment_columns
+schema_index_statistics
+schema_object_overview
+schema_redundant_indexes
+schema_table_lock_waits
+schema_table_statistics
+schema_table_statistics_with_buffer
+schema_tables_with_full_table_scans
+schema_unused_indexes
+session
+session_ssl_status
+statement_analysis
+statements_with_errors_or_warnings
+statements_with_full_table_scans
+statements_with_runtimes_in_95th_percentile
+statements_with_sorting
+statements_with_temp_tables
+user_summary
+user_summary_by_file_io
+user_summary_by_file_io_type
+user_summary_by_stages
+user_summary_by_statement_latency
+user_summary_by_statement_type
+version
+wait_classes_global_by_avg_latency
+wait_classes_global_by_latency
+waits_by_host_by_latency
+waits_by_user_by_latency
+waits_global_by_latency
+x$host_summary
+x$host_summary_by_file_io
+x$host_summary_by_file_io_type
+x$host_summary_by_stages
+x$host_summary_by_statement_latency
+x$host_summary_by_statement_type
+x$innodb_buffer_stats_by_schema
+x$innodb_buffer_stats_by_table
+x$innodb_lock_waits
+x$io_by_thread_by_latency
+x$io_global_by_file_by_bytes
+x$io_global_by_file_by_latency
+x$io_global_by_wait_by_bytes
+x$io_global_by_wait_by_latency
+x$latest_file_io
+x$memory_by_host_by_current_bytes
+x$memory_by_thread_by_current_bytes
+x$memory_by_user_by_current_bytes
+x$memory_global_by_current_bytes
+x$memory_global_total
+x$processlist
+x$ps_digest_95th_percentile_by_avg_us
+x$ps_digest_avg_latency_distribution
+x$ps_schema_table_statistics_io
+x$schema_flattened_keys
+x$schema_index_statistics
+x$schema_table_lock_waits
+x$schema_table_statistics
+x$schema_table_statistics_with_buffer
+x$schema_tables_with_full_table_scans
+x$session
+x$statement_analysis
+x$statements_with_errors_or_warnings
+x$statements_with_full_table_scans
+x$statements_with_runtimes_in_95th_percentile
+x$statements_with_sorting
+x$statements_with_temp_tables
+x$user_summary
+x$user_summary_by_file_io
+x$user_summary_by_file_io_type
+x$user_summary_by_stages
+x$user_summary_by_statement_latency
+x$user_summary_by_statement_type
+x$wait_classes_global_by_avg_latency
+x$wait_classes_global_by_latency
+x$waits_by_host_by_latency
+x$waits_by_user_by_latency
+x$waits_global_by_latency
+end------dbName:sys------
+start------dbName:test------
+end------dbName:test------
+--------------tableStructs------------
+--------dbName:dbadmin-------
+----tableName:schema_version----
+fieldStr:installed_rank	dbadmin	java.lang.Integer		INT	schema_version	installed_rank	
+installed_rank  INT:11
+fieldStr:version	dbadmin	java.lang.String		VARCHAR	schema_version	version	
+version  VARCHAR:50
+fieldStr:description	dbadmin	java.lang.String		VARCHAR	schema_version	description	
+description  VARCHAR:200
+fieldStr:type	dbadmin	java.lang.String		VARCHAR	schema_version	type	
+type  VARCHAR:20
+fieldStr:script	dbadmin	java.lang.String		VARCHAR	schema_version	script	
+script  VARCHAR:1000
+fieldStr:checksum	dbadmin	java.lang.Integer		INT	schema_version	checksum	
+checksum  INT:11
+fieldStr:installed_by	dbadmin	java.lang.String		VARCHAR	schema_version	installed_by	
+installed_by  VARCHAR:100
+fieldStr:installed_on	dbadmin	java.sql.Timestamp		TIMESTAMP	schema_version	installed_on	
+installed_on  TIMESTAMP:19
+fieldStr:execution_time	dbadmin	java.lang.Integer		INT	schema_version	execution_time	
+execution_time  INT:11
+fieldStr:success	dbadmin	java.lang.Boolean		TINYINT	schema_version	success	
+success  TINYINT:1
+--data--
+--------dbName:information_schema-------
+--------dbName:performance_schema-------
+--------dbName:test-------
+--------dbName:agent_platform-------
+----tableName:account----
+fieldStr:id	agent_platform	java.lang.Integer		INT	account	id	
+id  INT:11
+fieldStr:amount	agent_platform	java.math.BigInteger		BIGINT UNSIGNED	account	amount	
+amount  BIGINT UNSIGNED:20
+fieldStr:settle_amount	agent_platform	java.math.BigInteger		BIGINT UNSIGNED	account	settle_amount	
+settle_amount  BIGINT UNSIGNED:20
+fieldStr:bail_amount	agent_platform	java.math.BigInteger		BIGINT UNSIGNED	account	bail_amount	
+bail_amount  BIGINT UNSIGNED:20
+fieldStr:agent_no	agent_platform	java.lang.String		VARCHAR	account	agent_no	
+agent_no  VARCHAR:45
+fieldStr:account_no	agent_platform	java.lang.String		VARCHAR	account	account_no	
+account_no  VARCHAR:50
+fieldStr:created_at	agent_platform	java.sql.Timestamp		DATETIME	account	created_at	
+created_at  DATETIME:19
+fieldStr:updated_at	agent_platform	java.sql.Timestamp		DATETIME	account	updated_at	
+updated_at  DATETIME:19
+--data--
+----tableName:accounttransaction----
+fieldStr:id	agent_platform	java.lang.Integer		INT	accounttransaction	id	
+id  INT:11
+fieldStr:serial_no	agent_platform	java.lang.String		VARCHAR	accounttransaction	serial_no	
+serial_no  VARCHAR:50
+fieldStr:transfer_command_code	agent_platform	java.lang.String		VARCHAR	accounttransaction	transfer_command_code	
+transfer_command_code  VARCHAR:50
+fieldStr:direction	agent_platform	java.lang.String		VARCHAR	accounttransaction	direction	
+direction  VARCHAR:15
+fieldStr:transfer_type	agent_platform	java.lang.String		VARCHAR	accounttransaction	transfer_type	
+transfer_type  VARCHAR:15
+fieldStr:transfer_amount	agent_platform	java.math.BigInteger		BIGINT UNSIGNED	accounttransaction	transfer_amount	
+transfer_amount  BIGINT UNSIGNED:20
+fieldStr:pre_amount	agent_platform	java.math.BigInteger		BIGINT UNSIGNED	accounttransaction	pre_amount	
+pre_amount  BIGINT UNSIGNED:20
+fieldStr:amount	agent_platform	java.math.BigInteger		BIGINT UNSIGNED	accounttransaction	amount	
+amount  BIGINT UNSIGNED:20
+fieldStr:remark	agent_platform	java.lang.String		VARCHAR	accounttransaction	remark	
+remark  VARCHAR:25
+fieldStr:transfer_time	agent_platform	java.sql.Timestamp		DATETIME	accounttransaction	transfer_time	
+transfer_time  DATETIME:19
+fieldStr:agent_no	agent_platform	java.lang.String		VARCHAR	accounttransaction	agent_no	
+agent_no  VARCHAR:45
+fieldStr:account_no	agent_platform	java.lang.String		VARCHAR	accounttransaction	account_no	
+account_no  VARCHAR:50
+fieldStr:created_at	agent_platform	java.sql.Timestamp		DATETIME	accounttransaction	created_at	
+created_at  DATETIME:19
+fieldStr:updated_at	agent_platform	java.sql.Timestamp		DATETIME	accounttransaction	updated_at	
+updated_at  DATETIME:19
+--data--
+----tableName:agent----
+fieldStr:id	agent_platform	java.lang.Integer		INT	agent	id	
+id  INT:11
+fieldStr:name	agent_platform	java.lang.String		VARCHAR	agent	name	
+name  VARCHAR:50
+fieldStr:register_time	agent_platform	java.sql.Timestamp		DATETIME	agent	register_time	
+register_time  DATETIME:19
+fieldStr:register_ip	agent_platform	java.lang.String		VARCHAR	agent	register_ip	
+register_ip  VARCHAR:25
+fieldStr:pay_password	agent_platform	java.lang.String		VARCHAR	agent	pay_password	
+pay_password  VARCHAR:50
+fieldStr:phone_no	agent_platform	java.lang.String		VARCHAR	agent	phone_no	
+phone_no  VARCHAR:15
+fieldStr:applicant	agent_platform	java.lang.String		VARCHAR	agent	applicant	
+applicant  VARCHAR:15
+fieldStr:status	agent_platform	java.lang.String		VARCHAR	agent	status	
+status  VARCHAR:15
+fieldStr:check_time	agent_platform	java.sql.Timestamp		DATETIME	agent	check_time	
+check_time  DATETIME:19
+fieldStr:checker_name	agent_platform	java.lang.String		VARCHAR	agent	checker_name	
+checker_name  VARCHAR:15
+fieldStr:check_remark	agent_platform	java.lang.String		VARCHAR	agent	check_remark	
+check_remark  VARCHAR:50
+fieldStr:agent_no	agent_platform	java.lang.String		VARCHAR	agent	agent_no	
+agent_no  VARCHAR:45
+fieldStr:created_at	agent_platform	java.sql.Timestamp		DATETIME	agent	created_at	
+created_at  DATETIME:19
+fieldStr:updated_at	agent_platform	java.sql.Timestamp		DATETIME	agent	updated_at	
+updated_at  DATETIME:19
+--data--
+----tableName:agentglobalservicecfg----
+fieldStr:id	agent_platform	java.lang.Integer		INT	agentglobalservicecfg	id	
+id  INT:11
+fieldStr:name	agent_platform	java.lang.String		VARCHAR	agentglobalservicecfg	name	
+name  VARCHAR:25
+fieldStr:display_name	agent_platform	java.lang.String		VARCHAR	agentglobalservicecfg	display_name	
+display_name  VARCHAR:25
+fieldStr:is_visible	agent_platform	java.lang.Boolean		TINYINT	agentglobalservicecfg	is_visible	
+is_visible  TINYINT:1
+fieldStr:invoice_tax_ratio	agent_platform	java.lang.Double		DOUBLE	agentglobalservicecfg	invoice_tax_ratio	
+invoice_tax_ratio  DOUBLE:22
+fieldStr:single_withdraw_fee_amount	agent_platform	java.math.BigInteger		BIGINT UNSIGNED	agentglobalservicecfg	single_withdraw_fee_amount	
+single_withdraw_fee_amount  BIGINT UNSIGNED:20
+fieldStr:description	agent_platform	java.lang.String		VARCHAR	agentglobalservicecfg	description	
+description  VARCHAR:100
+fieldStr:extend	agent_platform	java.lang.String		VARCHAR	agentglobalservicecfg	extend	
+extend  VARCHAR:20
+fieldStr:created_at	agent_platform	java.sql.Timestamp		DATETIME	agentglobalservicecfg	created_at	
+created_at  DATETIME:19
+fieldStr:updated_at	agent_platform	java.sql.Timestamp		DATETIME	agentglobalservicecfg	updated_at	
+updated_at  DATETIME:19
+--data--
+----tableName:agentnew----
+fieldStr:id	agent_platform	java.lang.Integer		INT	agentnew	id	
+id  INT:11
+fieldStr:original_agent_no	agent_platform	java.lang.String		VARCHAR	agentnew	original_agent_no	
+original_agent_no  VARCHAR:45
+fieldStr:register_ip	agent_platform	java.lang.String		VARCHAR	agentnew	register_ip	
+register_ip  VARCHAR:25
+fieldStr:phone_no	agent_platform	java.lang.String		VARCHAR	agentnew	phone_no	
+phone_no  VARCHAR:15
+fieldStr:applicant	agent_platform	java.lang.String		VARCHAR	agentnew	applicant	
+applicant  VARCHAR:15
+fieldStr:status	agent_platform	java.lang.String		VARCHAR	agentnew	status	
+status  VARCHAR:15
+fieldStr:client_type	agent_platform	java.lang.String		VARCHAR	agentnew	client_type	
+client_type  VARCHAR:10
+fieldStr:fullname	agent_platform	java.lang.String		VARCHAR	agentnew	fullname	
+fullname  VARCHAR:20
+fieldStr:shortname	agent_platform	java.lang.String		VARCHAR	agentnew	shortname	
+shortname  VARCHAR:20
+fieldStr:address	agent_platform	java.lang.String		VARCHAR	agentnew	address	
+address  VARCHAR:50
+fieldStr:legal_person_name	agent_platform	java.lang.String		VARCHAR	agentnew	legal_person_name	
+legal_person_name  VARCHAR:20
+fieldStr:legal_person_id	agent_platform	java.lang.String		VARCHAR	agentnew	legal_person_id	
+legal_person_id  VARCHAR:30
+fieldStr:legal_person_id_img	agent_platform	java.lang.String		VARCHAR	agentnew	legal_person_id_img	
+legal_person_id_img  VARCHAR:20
+fieldStr:legal_person_id_back_img	agent_platform	java.lang.String		VARCHAR	agentnew	legal_person_id_back_img	
+legal_person_id_back_img  VARCHAR:20
+fieldStr:web_site	agent_platform	java.lang.String		VARCHAR	agentnew	web_site	
+web_site  VARCHAR:50
+fieldStr:logo_img	agent_platform	java.lang.String		VARCHAR	agentnew	logo_img	
+logo_img  VARCHAR:50
+fieldStr:is3cards_in1	agent_platform	java.lang.String		VARCHAR	agentnew	is3cards_in1	
+is3cards_in1  VARCHAR:255
+fieldStr:organization_code	agent_platform	java.lang.String		VARCHAR	agentnew	organization_code	
+organization_code  VARCHAR:50
+fieldStr:business_license_no	agent_platform	java.lang.String		VARCHAR	agentnew	business_license_no	
+business_license_no  VARCHAR:50
+fieldStr:business_license_img	agent_platform	java.lang.String		VARCHAR	agentnew	business_license_img	
+business_license_img  VARCHAR:100
+fieldStr:tax_register_no	agent_platform	java.lang.String		VARCHAR	agentnew	tax_register_no	
+tax_register_no  VARCHAR:50
+fieldStr:social_credit_code	agent_platform	java.lang.String		VARCHAR	agentnew	social_credit_code	
+social_credit_code  VARCHAR:50
+fieldStr:business_contacter_phone_no	agent_platform	java.lang.String		VARCHAR	agentnew	business_contacter_phone_no	
+business_contacter_phone_no  VARCHAR:11
+fieldStr:business_contacter_name	agent_platform	java.lang.String		VARCHAR	agentnew	business_contacter_name	
+business_contacter_name  VARCHAR:25
+fieldStr:business_contacter_email	agent_platform	java.lang.String		VARCHAR	agentnew	business_contacter_email	
+business_contacter_email  VARCHAR:50
+fieldStr:social_credit_code_img	agent_platform	java.lang.String		VARCHAR	agentnew	social_credit_code_img	
+social_credit_code_img  VARCHAR:50
+fieldStr:tax_register_no_img	agent_platform	java.lang.String		VARCHAR	agentnew	tax_register_no_img	
+tax_register_no_img  VARCHAR:50
+fieldStr:organization_code_img	agent_platform	java.lang.String		VARCHAR	agentnew	organization_code_img	
+organization_code_img  VARCHAR:50
+fieldStr:open_account_img	agent_platform	java.lang.String		VARCHAR	agentnew	open_account_img	
+open_account_img  VARCHAR:50
+fieldStr:bis_scope	agent_platform	java.lang.String		VARCHAR	agentnew	bis_scope	
+bis_scope  VARCHAR:40
+fieldStr:email	agent_platform	java.lang.String		VARCHAR	agentnew	email	
+email  VARCHAR:50
+fieldStr:agent_role_id	agent_platform	java.lang.String		VARCHAR	agentnew	agent_role_id	
+agent_role_id  VARCHAR:50
+fieldStr:card_no	agent_platform	java.lang.String		VARCHAR	agentnew	card_no	
+card_no  VARCHAR:50
+fieldStr:card_name	agent_platform	java.lang.String		VARCHAR	agentnew	card_name	
+card_name  VARCHAR:25
+fieldStr:bank_name	agent_platform	java.lang.String		VARCHAR	agentnew	bank_name	
+bank_name  VARCHAR:25
+fieldStr:bank_branch_name	agent_platform	java.lang.String		VARCHAR	agentnew	bank_branch_name	
+bank_branch_name  VARCHAR:25
+fieldStr:is_default	agent_platform	java.lang.String		VARCHAR	agentnew	is_default	
+is_default  VARCHAR:255
+fieldStr:bail_amount	agent_platform	java.math.BigInteger		BIGINT UNSIGNED	agentnew	bail_amount	
+bail_amount  BIGINT UNSIGNED:20
+fieldStr:clean_period_type	agent_platform	java.lang.String		VARCHAR	agentnew	clean_period_type	
+clean_period_type  VARCHAR:15
+fieldStr:settle_period_type	agent_platform	java.lang.String		VARCHAR	agentnew	settle_period_type	
+settle_period_type  VARCHAR:15
+fieldStr:expire_time	agent_platform	java.sql.Timestamp		DATETIME	agentnew	expire_time	
+expire_time  DATETIME:19
+fieldStr:effective_time	agent_platform	java.sql.Timestamp		DATETIME	agentnew	effective_time	
+effective_time  DATETIME:19
+fieldStr:create_time	agent_platform	java.sql.Timestamp		DATETIME	agentnew	create_time	
+create_time  DATETIME:19
+fieldStr:register_time	agent_platform	java.sql.Timestamp		DATETIME	agentnew	register_time	
+register_time  DATETIME:19
+fieldStr:check_time	agent_platform	java.sql.Timestamp		DATETIME	agentnew	check_time	
+check_time  DATETIME:19
+fieldStr:checker_name	agent_platform	java.lang.String		VARCHAR	agentnew	checker_name	
+checker_name  VARCHAR:15
+fieldStr:check_remark	agent_platform	java.lang.String		VARCHAR	agentnew	check_remark	
+check_remark  VARCHAR:50
+fieldStr:agent_no	agent_platform	java.lang.String		VARCHAR	agentnew	agent_no	
+agent_no  VARCHAR:45
+fieldStr:account_no	agent_platform	java.lang.String		VARCHAR	agentnew	account_no	
+account_no  VARCHAR:50
+fieldStr:created_at	agent_platform	java.sql.Timestamp		DATETIME	agentnew	created_at	
+created_at  DATETIME:19
+fieldStr:updated_at	agent_platform	java.sql.Timestamp		DATETIME	agentnew	updated_at	
+updated_at  DATETIME:19
+--data--
+----tableName:agentrole----
+fieldStr:id	agent_platform	java.lang.Integer		INT	agentrole	id	
+id  INT:11
+fieldStr:name	agent_platform	java.lang.String		VARCHAR	agentrole	name	
+name  VARCHAR:25
+fieldStr:display_name	agent_platform	java.lang.String		VARCHAR	agentrole	display_name	
+display_name  VARCHAR:25
+fieldStr:authority	agent_platform	java.lang.String		VARCHAR	agentrole	authority	
+authority  VARCHAR:15
+fieldStr:agent_no	agent_platform	java.lang.String		VARCHAR	agentrole	agent_no	
+agent_no  VARCHAR:45
+fieldStr:created_at	agent_platform	java.sql.Timestamp		DATETIME	agentrole	created_at	
+created_at  DATETIME:19
+fieldStr:updated_at	agent_platform	java.sql.Timestamp		DATETIME	agentrole	updated_at	
+updated_at  DATETIME:19
+--data--
+----tableName:bankcard----
+fieldStr:id	agent_platform	java.lang.Integer		INT	bankcard	id	
+id  INT:11
+fieldStr:is_default	agent_platform	java.lang.Boolean		TINYINT	bankcard	is_default	
+is_default  TINYINT:1
+fieldStr:agent_no	agent_platform	java.lang.String		VARCHAR	bankcard	agent_no	
+agent_no  VARCHAR:45
+fieldStr:card_no	agent_platform	java.lang.String		VARCHAR	bankcard	card_no	
+card_no  VARCHAR:50
+fieldStr:card_name	agent_platform	java.lang.String		VARCHAR	bankcard	card_name	
+card_name  VARCHAR:25
+fieldStr:bank_name	agent_platform	java.lang.String		VARCHAR	bankcard	bank_name	
+bank_name  VARCHAR:25
+fieldStr:bank_branch_name	agent_platform	java.lang.String		VARCHAR	bankcard	bank_branch_name	
+bank_branch_name  VARCHAR:25
+fieldStr:created_at	agent_platform	java.sql.Timestamp		DATETIME	bankcard	created_at	
+created_at  DATETIME:19
+fieldStr:updated_at	agent_platform	java.sql.Timestamp		DATETIME	bankcard	updated_at	
+updated_at  DATETIME:19
+--data--
+----tableName:company----
+fieldStr:id	agent_platform	java.lang.Integer		INT	company	id	
+id  INT:11
+fieldStr:client_type	agent_platform	java.lang.String		VARCHAR	company	client_type	
+client_type  VARCHAR:10
+fieldStr:fullname	agent_platform	java.lang.String		VARCHAR	company	fullname	
+fullname  VARCHAR:20
+fieldStr:shortname	agent_platform	java.lang.String		VARCHAR	company	shortname	
+shortname  VARCHAR:20
+fieldStr:address	agent_platform	java.lang.String		VARCHAR	company	address	
+address  VARCHAR:50
+fieldStr:legal_person_name	agent_platform	java.lang.String		VARCHAR	company	legal_person_name	
+legal_person_name  VARCHAR:20
+fieldStr:legal_person_id	agent_platform	java.lang.String		VARCHAR	company	legal_person_id	
+legal_person_id  VARCHAR:30
+fieldStr:legal_person_id_img	agent_platform	java.lang.String		VARCHAR	company	legal_person_id_img	
+legal_person_id_img  VARCHAR:20
+fieldStr:legal_person_id_back_img	agent_platform	java.lang.String		VARCHAR	company	legal_person_id_back_img	
+legal_person_id_back_img  VARCHAR:20
+fieldStr:web_site	agent_platform	java.lang.String		VARCHAR	company	web_site	
+web_site  VARCHAR:50
+fieldStr:logo_img	agent_platform	java.lang.String		VARCHAR	company	logo_img	
+logo_img  VARCHAR:50
+fieldStr:is3cards_in1	agent_platform	java.lang.String		VARCHAR	company	is3cards_in1	
+is3cards_in1  VARCHAR:255
+fieldStr:organization_code	agent_platform	java.lang.String		VARCHAR	company	organization_code	
+organization_code  VARCHAR:50
+fieldStr:business_license_no	agent_platform	java.lang.String		VARCHAR	company	business_license_no	
+business_license_no  VARCHAR:50
+fieldStr:business_license_img	agent_platform	java.lang.String		VARCHAR	company	business_license_img	
+business_license_img  VARCHAR:100
+fieldStr:tax_register_no	agent_platform	java.lang.String		VARCHAR	company	tax_register_no	
+tax_register_no  VARCHAR:50
+fieldStr:social_credit_code	agent_platform	java.lang.String		VARCHAR	company	social_credit_code	
+social_credit_code  VARCHAR:50
+fieldStr:business_contacter_phone_no	agent_platform	java.lang.String		VARCHAR	company	business_contacter_phone_no	
+business_contacter_phone_no  VARCHAR:11
+fieldStr:business_contacter_name	agent_platform	java.lang.String		VARCHAR	company	business_contacter_name	
+business_contacter_name  VARCHAR:25
+fieldStr:business_contacter_email	agent_platform	java.lang.String		VARCHAR	company	business_contacter_email	
+business_contacter_email  VARCHAR:50
+fieldStr:social_credit_code_img	agent_platform	java.lang.String		VARCHAR	company	social_credit_code_img	
+social_credit_code_img  VARCHAR:50
+fieldStr:tax_register_no_img	agent_platform	java.lang.String		VARCHAR	company	tax_register_no_img	
+tax_register_no_img  VARCHAR:50
+fieldStr:organization_code_img	agent_platform	java.lang.String		VARCHAR	company	organization_code_img	
+organization_code_img  VARCHAR:50
+fieldStr:open_account_img	agent_platform	java.lang.String		VARCHAR	company	open_account_img	
+open_account_img  VARCHAR:50
+fieldStr:bis_scope	agent_platform	java.lang.String		VARCHAR	company	bis_scope	
+bis_scope  VARCHAR:255
+fieldStr:agent_no	agent_platform	java.lang.String		VARCHAR	company	agent_no	
+agent_no  VARCHAR:45
+fieldStr:created_at	agent_platform	java.sql.Timestamp		DATETIME	company	created_at	
+created_at  DATETIME:19
+fieldStr:updated_at	agent_platform	java.sql.Timestamp		DATETIME	company	updated_at	
+updated_at  DATETIME:19
+--data--
+----tableName:liquidation----
+fieldStr:id	agent_platform	java.lang.Integer		INT	liquidation	id	
+id  INT:11
+fieldStr:liquidate_serial_no	agent_platform	java.lang.String		VARCHAR	liquidation	liquidate_serial_no	
+liquidate_serial_no  VARCHAR:50
+fieldStr:parent_liquidate_serial_no	agent_platform	java.lang.String		VARCHAR	liquidation	parent_liquidate_serial_no	
+parent_liquidate_serial_no  VARCHAR:50
+fieldStr:settle_serial_no	agent_platform	java.lang.String		VARCHAR	liquidation	settle_serial_no	
+settle_serial_no  VARCHAR:50
+fieldStr:settle_detail_serial_no	agent_platform	java.lang.String		VARCHAR	liquidation	settle_detail_serial_no	
+settle_detail_serial_no  VARCHAR:50
+fieldStr:trade_time	agent_platform	java.sql.Timestamp		DATETIME	liquidation	trade_time	
+trade_time  DATETIME:19
+fieldStr:total_count	agent_platform	java.lang.Integer		INT	liquidation	total_count	
+total_count  INT:11
+fieldStr:total_amount	agent_platform	java.math.BigInteger		BIGINT UNSIGNED	liquidation	total_amount	
+total_amount  BIGINT UNSIGNED:20
+fieldStr:start_time	agent_platform	java.sql.Timestamp		DATETIME	liquidation	start_time	
+start_time  DATETIME:19
+fieldStr:end_time	agent_platform	java.sql.Timestamp		DATETIME	liquidation	end_time	
+end_time  DATETIME:19
+fieldStr:status	agent_platform	java.lang.Boolean		TINYINT	liquidation	status	
+status  TINYINT:1
+fieldStr:reason	agent_platform	java.lang.String		VARCHAR	liquidation	reason	
+reason  VARCHAR:50
+fieldStr:agent_no	agent_platform	java.lang.String		VARCHAR	liquidation	agent_no	
+agent_no  VARCHAR:45
+fieldStr:trade_type	agent_platform	java.lang.String		VARCHAR	liquidation	trade_type	
+trade_type  VARCHAR:10
+fieldStr:trade_way	agent_platform	java.lang.String		VARCHAR	liquidation	trade_way	
+trade_way  VARCHAR:15
+fieldStr:merchant_fee_ratio	agent_platform	java.lang.Double		DOUBLE	liquidation	merchant_fee_ratio	
+merchant_fee_ratio  DOUBLE:22
+fieldStr:agent_fee_ratio	agent_platform	java.lang.Double		DOUBLE	liquidation	agent_fee_ratio	
+agent_fee_ratio  DOUBLE:22
+fieldStr:merchant_no	agent_platform	java.lang.String		VARCHAR	liquidation	merchant_no	
+merchant_no  VARCHAR:45
+fieldStr:merchant_name	agent_platform	java.lang.String		VARCHAR	liquidation	merchant_name	
+merchant_name  VARCHAR:20
+fieldStr:agent_username	agent_platform	java.lang.String		VARCHAR	liquidation	agent_username	
+agent_username  VARCHAR:50
+fieldStr:created_at	agent_platform	java.sql.Timestamp		DATETIME	liquidation	created_at	
+created_at  DATETIME:19
+fieldStr:updated_at	agent_platform	java.sql.Timestamp		DATETIME	liquidation	updated_at	
+updated_at  DATETIME:19
+fieldStr:type	agent_platform	java.lang.String		VARCHAR	liquidation	type	
+type  VARCHAR:15
+fieldStr:fee_split_amount	agent_platform	java.math.BigInteger		BIGINT UNSIGNED	liquidation	fee_split_amount	
+fee_split_amount  BIGINT UNSIGNED:20
+--data--
+----tableName:merchant----
+fieldStr:id	agent_platform	java.lang.Integer		INT	merchant	id	
+id  INT:11
+fieldStr:name	agent_platform	java.lang.String		VARCHAR	merchant	name	
+name  VARCHAR:50
+fieldStr:phone_no	agent_platform	java.lang.String		VARCHAR	merchant	phone_no	
+phone_no  VARCHAR:15
+fieldStr:register_time	agent_platform	java.sql.Timestamp		DATETIME	merchant	register_time	
+register_time  DATETIME:19
+fieldStr:register_ip	agent_platform	java.lang.String		VARCHAR	merchant	register_ip	
+register_ip  VARCHAR:255
+fieldStr:industry_type	agent_platform	java.lang.String		VARCHAR	merchant	industry_type	
+industry_type  VARCHAR:20
+fieldStr:applicant	agent_platform	java.lang.String		VARCHAR	merchant	applicant	
+applicant  VARCHAR:15
+fieldStr:check_time	agent_platform	java.sql.Timestamp		DATETIME	merchant	check_time	
+check_time  DATETIME:19
+fieldStr:checker_name	agent_platform	java.lang.String		VARCHAR	merchant	checker_name	
+checker_name  VARCHAR:15
+fieldStr:check_remark	agent_platform	java.lang.String		VARCHAR	merchant	check_remark	
+check_remark  VARCHAR:50
+fieldStr:status	agent_platform	java.lang.String		VARCHAR	merchant	status	
+status  VARCHAR:15
+fieldStr:email	agent_platform	java.lang.String		VARCHAR	merchant	email	
+email  VARCHAR:50
+fieldStr:agent_no	agent_platform	java.lang.String		VARCHAR	merchant	agent_no	
+agent_no  VARCHAR:45
+fieldStr:merchant_no	agent_platform	java.lang.String		VARCHAR	merchant	merchant_no	
+merchant_no  VARCHAR:45
+fieldStr:created_at	agent_platform	java.sql.Timestamp		DATETIME	merchant	created_at	
+created_at  DATETIME:19
+fieldStr:updated_at	agent_platform	java.sql.Timestamp		DATETIME	merchant	updated_at	
+updated_at  DATETIME:19
+--data--
+----tableName:operatelog----
+fieldStr:id	agent_platform	java.lang.Integer		INT	operatelog	id	
+id  INT:11
+fieldStr:operator_name	agent_platform	java.lang.String		VARCHAR	operatelog	operator_name	
+operator_name  VARCHAR:25
+fieldStr:action_name	agent_platform	java.lang.String		VARCHAR	operatelog	action_name	
+action_name  VARCHAR:25
+fieldStr:clinet_ip	agent_platform	java.lang.String		VARCHAR	operatelog	clinet_ip	
+clinet_ip  VARCHAR:20
+fieldStr:client_device_info	agent_platform	java.lang.String		VARCHAR	operatelog	client_device_info	
+client_device_info  VARCHAR:50
+fieldStr:remark	agent_platform	java.lang.String		VARCHAR	operatelog	remark	
+remark  VARCHAR:100
+fieldStr:agent_no	agent_platform	java.lang.String		VARCHAR	operatelog	agent_no	
+agent_no  VARCHAR:45
+fieldStr:created_at	agent_platform	java.sql.Timestamp		DATETIME	operatelog	created_at	
+created_at  DATETIME:19
+fieldStr:updated_at	agent_platform	java.sql.Timestamp		DATETIME	operatelog	updated_at	
+updated_at  DATETIME:19
+--data--
+----tableName:productcontract----
+fieldStr:id	agent_platform	java.lang.Integer		INT	productcontract	id	
+id  INT:11
+fieldStr:contract_no	agent_platform	java.lang.String		VARCHAR	productcontract	contract_no	
+contract_no  VARCHAR:50
+fieldStr:bail_amount	agent_platform	java.math.BigInteger		BIGINT UNSIGNED	productcontract	bail_amount	
+bail_amount  BIGINT UNSIGNED:20
+fieldStr:clean_period_type	agent_platform	java.lang.String		VARCHAR	productcontract	clean_period_type	
+clean_period_type  VARCHAR:15
+fieldStr:settle_period_type	agent_platform	java.lang.String		VARCHAR	productcontract	settle_period_type	
+settle_period_type  VARCHAR:15
+fieldStr:expire_time	agent_platform	java.sql.Timestamp		DATETIME	productcontract	expire_time	
+expire_time  DATETIME:19
+fieldStr:effective_time	agent_platform	java.sql.Timestamp		DATETIME	productcontract	effective_time	
+effective_time  DATETIME:19
+fieldStr:agent_no	agent_platform	java.lang.String		VARCHAR	productcontract	agent_no	
+agent_no  VARCHAR:45
+fieldStr:created_at	agent_platform	java.sql.Timestamp		DATETIME	productcontract	created_at	
+created_at  DATETIME:19
+fieldStr:updated_at	agent_platform	java.sql.Timestamp		DATETIME	productcontract	updated_at	
+updated_at  DATETIME:19
+--data--
+----tableName:productfeerule----
+fieldStr:id	agent_platform	java.lang.Integer		INT	productfeerule	id	
+id  INT:11
+fieldStr:industry_type	agent_platform	java.lang.String		VARCHAR	productfeerule	industry_type	
+industry_type  VARCHAR:20
+fieldStr:calculate_type	agent_platform	java.lang.String		VARCHAR	productfeerule	calculate_type	
+calculate_type  VARCHAR:50
+fieldStr:fee_rate	agent_platform	java.lang.Double		DOUBLE	productfeerule	fee_rate	
+fee_rate  DOUBLE:22
+fieldStr:agent_no	agent_platform	java.lang.String		VARCHAR	productfeerule	agent_no	
+agent_no  VARCHAR:45
+fieldStr:trade_type	agent_platform	java.lang.String		VARCHAR	productfeerule	trade_type	
+trade_type  VARCHAR:10
+fieldStr:trade_way	agent_platform	java.lang.String		VARCHAR	productfeerule	trade_way	
+trade_way  VARCHAR:15
+fieldStr:created_at	agent_platform	java.sql.Timestamp		DATETIME	productfeerule	created_at	
+created_at  DATETIME:19
+fieldStr:updated_at	agent_platform	java.sql.Timestamp		DATETIME	productfeerule	updated_at	
+updated_at  DATETIME:19
+--data--
+----tableName:servicecaptchacode----
+fieldStr:id	agent_platform	java.lang.Integer		INT	servicecaptchacode	id	
+id  INT:11
+fieldStr:user_id	agent_platform	java.lang.String		VARCHAR	servicecaptchacode	user_id	
+user_id  VARCHAR:20
+fieldStr:send_type	agent_platform	java.lang.Boolean		TINYINT	servicecaptchacode	send_type	
+send_type  TINYINT:1
+fieldStr:status	agent_platform	java.lang.Boolean		TINYINT	servicecaptchacode	status	
+status  TINYINT:1
+fieldStr:expire_time	agent_platform	java.sql.Timestamp		DATETIME	servicecaptchacode	expire_time	
+expire_time  DATETIME:19
+fieldStr:ip	agent_platform	java.lang.String		VARCHAR	servicecaptchacode	ip	
+ip  VARCHAR:25
+fieldStr:code	agent_platform	java.lang.String		VARCHAR	servicecaptchacode	code	
+code  VARCHAR:30
+fieldStr:agent_no	agent_platform	java.lang.String		VARCHAR	servicecaptchacode	agent_no	
+agent_no  VARCHAR:45
+fieldStr:created_at	agent_platform	java.sql.Timestamp		DATETIME	servicecaptchacode	created_at	
+created_at  DATETIME:19
+fieldStr:updated_at	agent_platform	java.sql.Timestamp		DATETIME	servicecaptchacode	updated_at	
+updated_at  DATETIME:19
+--data--
+----tableName:settle----
+fieldStr:id	agent_platform	java.lang.Integer		INT	settle	id	
+id  INT:11
+fieldStr:parent_settle_serial_no	agent_platform	java.lang.String		VARCHAR	settle	parent_settle_serial_no	
+parent_settle_serial_no  VARCHAR:50
+fieldStr:settle_serial_no	agent_platform	java.lang.String		VARCHAR	settle	settle_serial_no	
+settle_serial_no  VARCHAR:50
+fieldStr:trade_time	agent_platform	java.sql.Timestamp		DATETIME	settle	trade_time	
+trade_time  DATETIME:19
+fieldStr:total_count	agent_platform	java.lang.Integer		INT	settle	total_count	
+total_count  INT:11
+fieldStr:total_amount	agent_platform	java.math.BigInteger		BIGINT UNSIGNED	settle	total_amount	
+total_amount  BIGINT UNSIGNED:20
+fieldStr:fee_split_amount	agent_platform	java.math.BigInteger		BIGINT UNSIGNED	settle	fee_split_amount	
+fee_split_amount  BIGINT UNSIGNED:20
+fieldStr:start_time	agent_platform	java.sql.Timestamp		DATETIME	settle	start_time	
+start_time  DATETIME:19
+fieldStr:end_time	agent_platform	java.sql.Timestamp		DATETIME	settle	end_time	
+end_time  DATETIME:19
+fieldStr:status	agent_platform	java.lang.Boolean		TINYINT	settle	status	
+status  TINYINT:1
+fieldStr:reason	agent_platform	java.lang.String		VARCHAR	settle	reason	
+reason  VARCHAR:50
+fieldStr:agent_no	agent_platform	java.lang.String		VARCHAR	settle	agent_no	
+agent_no  VARCHAR:45
+fieldStr:trade_type	agent_platform	java.lang.String		VARCHAR	settle	trade_type	
+trade_type  VARCHAR:10
+fieldStr:trade_way	agent_platform	java.lang.String		VARCHAR	settle	trade_way	
+trade_way  VARCHAR:15
+fieldStr:merchant_no	agent_platform	java.lang.String		VARCHAR	settle	merchant_no	
+merchant_no  VARCHAR:45
+fieldStr:merchant_name	agent_platform	java.lang.String		VARCHAR	settle	merchant_name	
+merchant_name  VARCHAR:20
+fieldStr:agent_username	agent_platform	java.lang.String		VARCHAR	settle	agent_username	
+agent_username  VARCHAR:50
+fieldStr:created_at	agent_platform	java.sql.Timestamp		DATETIME	settle	created_at	
+created_at  DATETIME:19
+fieldStr:updated_at	agent_platform	java.sql.Timestamp		DATETIME	settle	updated_at	
+updated_at  DATETIME:19
+fieldStr:type	agent_platform	java.lang.String		VARCHAR	settle	type	
+type  VARCHAR:15
+--data--
+----tableName:trade----
+fieldStr:id	agent_platform	java.lang.Integer		INT	trade	id	
+id  INT:11
+fieldStr:merchant_name	agent_platform	java.lang.String		VARCHAR	trade	merchant_name	
+merchant_name  VARCHAR:50
+fieldStr:order_no	agent_platform	java.lang.String		VARCHAR	trade	order_no	
+order_no  VARCHAR:45
+fieldStr:order_detail_no	agent_platform	java.lang.String		VARCHAR	trade	order_detail_no	
+order_detail_no  VARCHAR:45
+fieldStr:amount	agent_platform	java.math.BigInteger		BIGINT UNSIGNED	trade	amount	
+amount  BIGINT UNSIGNED:20
+fieldStr:fee_amount	agent_platform	java.math.BigInteger		BIGINT UNSIGNED	trade	fee_amount	
+fee_amount  BIGINT UNSIGNED:20
+fieldStr:trade_time	agent_platform	java.sql.Timestamp		DATETIME	trade	trade_time	
+trade_time  DATETIME:19
+fieldStr:liquidate_serial_no	agent_platform	java.lang.String		VARCHAR	trade	liquidate_serial_no	
+liquidate_serial_no  VARCHAR:45
+fieldStr:liquidate_detail_serial_no	agent_platform	java.lang.String		VARCHAR	trade	liquidate_detail_serial_no	
+liquidate_detail_serial_no  VARCHAR:45
+fieldStr:liquidate_time	agent_platform	java.sql.Timestamp		DATETIME	trade	liquidate_time	
+liquidate_time  DATETIME:19
+fieldStr:settle_serial_no	agent_platform	java.lang.String		VARCHAR	trade	settle_serial_no	
+settle_serial_no  VARCHAR:45
+fieldStr:settle_detail_serial_no	agent_platform	java.lang.String		VARCHAR	trade	settle_detail_serial_no	
+settle_detail_serial_no  VARCHAR:45
+fieldStr:setle_time	agent_platform	java.sql.Timestamp		DATETIME	trade	setle_time	
+setle_time  DATETIME:19
+fieldStr:fee_split_amount	agent_platform	java.math.BigInteger		BIGINT UNSIGNED	trade	fee_split_amount	
+fee_split_amount  BIGINT UNSIGNED:20
+fieldStr:fee_split_status	agent_platform	java.lang.String		VARCHAR	trade	fee_split_status	
+fee_split_status  VARCHAR:20
+fieldStr:fee_split_reason	agent_platform	java.lang.String		VARCHAR	trade	fee_split_reason	
+fee_split_reason  VARCHAR:255
+fieldStr:agent_no	agent_platform	java.lang.String		VARCHAR	trade	agent_no	
+agent_no  VARCHAR:45
+fieldStr:trade_type	agent_platform	java.lang.String		VARCHAR	trade	trade_type	
+trade_type  VARCHAR:10
+fieldStr:trade_way	agent_platform	java.lang.String		VARCHAR	trade	trade_way	
+trade_way  VARCHAR:15
+fieldStr:merchant_fee_ratio	agent_platform	java.lang.Double		DOUBLE	trade	merchant_fee_ratio	
+merchant_fee_ratio  DOUBLE:22
+fieldStr:agent_fee_ratio	agent_platform	java.lang.Double		DOUBLE	trade	agent_fee_ratio	
+agent_fee_ratio  DOUBLE:22
+fieldStr:agent_username	agent_platform	java.lang.String		VARCHAR	trade	agent_username	
+agent_username  VARCHAR:50
+fieldStr:merchant_no	agent_platform	java.lang.String		VARCHAR	trade	merchant_no	
+merchant_no  VARCHAR:45
+fieldStr:created_at	agent_platform	java.sql.Timestamp		DATETIME	trade	created_at	
+created_at  DATETIME:19
+fieldStr:updated_at	agent_platform	java.sql.Timestamp		DATETIME	trade	updated_at	
+updated_at  DATETIME:19
+fieldStr:fee_split_detail_reason	agent_platform	java.lang.String		VARCHAR	trade	fee_split_detail_reason	
+fee_split_detail_reason  VARCHAR:255
+--data--
+----tableName:user----
+fieldStr:id	agent_platform	java.lang.Integer		INT	user	id	
+id  INT:11
+fieldStr:user_name	agent_platform	java.lang.String		VARCHAR	user	user_name	
+user_name  VARCHAR:25
+fieldStr:init_password	agent_platform	java.lang.String		VARCHAR	user	init_password	
+init_password  VARCHAR:50
+fieldStr:password	agent_platform	java.lang.String		VARCHAR	user	password	
+password  VARCHAR:50
+fieldStr:random_key	agent_platform	java.lang.String		VARCHAR	user	random_key	
+random_key  VARCHAR:128
+fieldStr:email	agent_platform	java.lang.String		VARCHAR	user	email	
+email  VARCHAR:50
+fieldStr:phone_no	agent_platform	java.lang.String		VARCHAR	user	phone_no	
+phone_no  VARCHAR:11
+fieldStr:head_img	agent_platform	java.lang.String		VARCHAR	user	head_img	
+head_img  VARCHAR:100
+fieldStr:login_times	agent_platform	java.lang.Integer		INT	user	login_times	
+login_times  INT:11
+fieldStr:last_login_time	agent_platform	java.sql.Timestamp		DATETIME	user	last_login_time	
+last_login_time  DATETIME:19
+fieldStr:last_login_ip	agent_platform	java.lang.String		VARCHAR	user	last_login_ip	
+last_login_ip  VARCHAR:20
+fieldStr:agent_role_id	agent_platform	java.lang.String		VARCHAR	user	agent_role_id	
+agent_role_id  VARCHAR:50
+fieldStr:register_time	agent_platform	java.sql.Timestamp		DATETIME	user	register_time	
+register_time  DATETIME:19
+fieldStr:register_ip	agent_platform	java.lang.String		VARCHAR	user	register_ip	
+register_ip  VARCHAR:20
+fieldStr:status	agent_platform	java.lang.Boolean		TINYINT	user	status	
+status  TINYINT:1
+fieldStr:create_time	agent_platform	java.sql.Timestamp		DATETIME	user	create_time	
+create_time  DATETIME:19
+fieldStr:client_type	agent_platform	java.lang.String		VARCHAR	user	client_type	
+client_type  VARCHAR:10
+fieldStr:agent_no	agent_platform	java.lang.String		VARCHAR	user	agent_no	
+agent_no  VARCHAR:45
+fieldStr:created_at	agent_platform	java.sql.Timestamp		DATETIME	user	created_at	
+created_at  DATETIME:19
+fieldStr:updated_at	agent_platform	java.sql.Timestamp		DATETIME	user	updated_at	
+updated_at  DATETIME:19
+fieldStr:access_token	agent_platform	java.lang.String		VARCHAR	user	access_token	
+access_token  VARCHAR:50
+fieldStr:init_type	agent_platform	java.lang.String		VARCHAR	user	init_type	
+init_type  VARCHAR:15
+--data--
+----tableName:withdraw----
+fieldStr:id	agent_platform	java.lang.Integer		INT	withdraw	id	
+id  INT:11
+fieldStr:serial_no	agent_platform	java.lang.String		VARCHAR	withdraw	serial_no	
+serial_no  VARCHAR:50
+fieldStr:user_id	agent_platform	java.lang.String		VARCHAR	withdraw	user_id	
+user_id  VARCHAR:25
+fieldStr:user_name	agent_platform	java.lang.String		VARCHAR	withdraw	user_name	
+user_name  VARCHAR:25
+fieldStr:request_amount	agent_platform	java.math.BigInteger		BIGINT UNSIGNED	withdraw	request_amount	
+request_amount  BIGINT UNSIGNED:20
+fieldStr:invoice_type	agent_platform	java.lang.String		VARCHAR	withdraw	invoice_type	
+invoice_type  VARCHAR:15
+fieldStr:amount	agent_platform	java.math.BigInteger		BIGINT UNSIGNED	withdraw	amount	
+amount  BIGINT UNSIGNED:20
+fieldStr:single_withdraw_fee_amount	agent_platform	java.math.BigInteger		BIGINT UNSIGNED	withdraw	single_withdraw_fee_amount	
+single_withdraw_fee_amount  BIGINT UNSIGNED:20
+fieldStr:invoice_tax_ratio	agent_platform	java.lang.Double		DOUBLE	withdraw	invoice_tax_ratio	
+invoice_tax_ratio  DOUBLE:22
+fieldStr:status	agent_platform	java.lang.String		VARCHAR	withdraw	status	
+status  VARCHAR:15
+fieldStr:remark	agent_platform	java.lang.String		VARCHAR	withdraw	remark	
+remark  VARCHAR:25
+fieldStr:apply_time	agent_platform	java.sql.Timestamp		DATETIME	withdraw	apply_time	
+apply_time  DATETIME:19
+fieldStr:express_order_no	agent_platform	java.lang.String		VARCHAR	withdraw	express_order_no	
+express_order_no  VARCHAR:50
+fieldStr:express_company_name	agent_platform	java.lang.String		VARCHAR	withdraw	express_company_name	
+express_company_name  VARCHAR:50
+fieldStr:checker_name	agent_platform	java.lang.String		VARCHAR	withdraw	checker_name	
+checker_name  VARCHAR:20
+fieldStr:agent_no	agent_platform	java.lang.String		VARCHAR	withdraw	agent_no	
+agent_no  VARCHAR:45
+fieldStr:agent_username	agent_platform	java.lang.String		VARCHAR	withdraw	agent_username	
+agent_username  VARCHAR:50
+fieldStr:card_no	agent_platform	java.lang.String		VARCHAR	withdraw	card_no	
+card_no  VARCHAR:50
+fieldStr:card_name	agent_platform	java.lang.String		VARCHAR	withdraw	card_name	
+card_name  VARCHAR:25
+fieldStr:bank_name	agent_platform	java.lang.String		VARCHAR	withdraw	bank_name	
+bank_name  VARCHAR:25
+fieldStr:bank_branch_name	agent_platform	java.lang.String		VARCHAR	withdraw	bank_branch_name	
+bank_branch_name  VARCHAR:25
+fieldStr:created_at	agent_platform	java.sql.Timestamp		DATETIME	withdraw	created_at	
+created_at  DATETIME:19
+fieldStr:updated_at	agent_platform	java.sql.Timestamp		DATETIME	withdraw	updated_at	
+updated_at  DATETIME:19
+--data--
+--------dbName:mysql-------
+--------dbName:recondb-------
+----tableName:acquire_trade----
+fieldStr:trade_way	recondb	java.lang.String		VARCHAR	acquire_trade	trade_way	
+trade_way  VARCHAR:10
+fieldStr:customer_no	recondb	java.lang.String		VARCHAR	acquire_trade	customer_no	
+customer_no  VARCHAR:45
+fieldStr:customer_name	recondb	java.lang.String		VARCHAR	acquire_trade	customer_name	
+customer_name  VARCHAR:20
+fieldStr:sub_channel_code	recondb	java.lang.String		VARCHAR	acquire_trade	sub_channel_code	
+sub_channel_code  VARCHAR:10
+fieldStr:channel_trade_no	recondb	java.lang.String		VARCHAR	acquire_trade	channel_trade_no	
+channel_trade_no  VARCHAR:45
+fieldStr:status	recondb	java.lang.Integer		TINYINT	acquire_trade	status	
+status  TINYINT:4
+fieldStr:batch_no	recondb	java.lang.String		VARCHAR	acquire_trade	batch_no	
+batch_no  VARCHAR:45
+fieldStr:trade_day	recondb	java.lang.String		VARCHAR	acquire_trade	trade_day	
+trade_day  VARCHAR:8
+fieldStr:recon_date	recondb	java.sql.Timestamp		TIMESTAMP	acquire_trade	recon_date	
+recon_date  TIMESTAMP:19
+fieldStr:channel_code	recondb	java.lang.String		VARCHAR	acquire_trade	channel_code	
+channel_code  VARCHAR:10
+fieldStr:recon_no	recondb	java.lang.String		VARCHAR	acquire_trade	recon_no	
+recon_no  VARCHAR:45
+fieldStr:trade_no	recondb	java.lang.String		VARCHAR	acquire_trade	trade_no	
+trade_no  VARCHAR:45
+fieldStr:amount	recondb	java.math.BigInteger		BIGINT UNSIGNED	acquire_trade	amount	
+amount  BIGINT UNSIGNED:20
+fieldStr:fee	recondb	java.math.BigInteger		BIGINT UNSIGNED	acquire_trade	fee	
+fee  BIGINT UNSIGNED:20
+fieldStr:trade_date	recondb	java.sql.Timestamp		TIMESTAMP	acquire_trade	trade_date	
+trade_date  TIMESTAMP:19
+fieldStr:customer_trade_no	recondb	java.lang.String		VARCHAR	acquire_trade	customer_trade_no	
+customer_trade_no  VARCHAR:45
+fieldStr:id	recondb	java.math.BigInteger		BIGINT UNSIGNED	acquire_trade	id	
+id  BIGINT UNSIGNED:20
+fieldStr:created_at	recondb	java.sql.Timestamp		TIMESTAMP	acquire_trade	created_at	
+created_at  TIMESTAMP:19
+fieldStr:updated_at	recondb	java.sql.Timestamp		TIMESTAMP	acquire_trade	updated_at	
+updated_at  TIMESTAMP:19
+fieldStr:deleted_at	recondb	java.sql.Timestamp		TIMESTAMP	acquire_trade	deleted_at	
+deleted_at  TIMESTAMP:19
+--data--
+----tableName:agentpay_trade----
+fieldStr:card_name	recondb	java.lang.String		VARCHAR	agentpay_trade	card_name	
+card_name  VARCHAR:20
+fieldStr:card_no	recondb	java.lang.String		VARCHAR	agentpay_trade	card_no	
+card_no  VARCHAR:20
+fieldStr:customer_no	recondb	java.lang.String		VARCHAR	agentpay_trade	customer_no	
+customer_no  VARCHAR:45
+fieldStr:customer_name	recondb	java.lang.String		VARCHAR	agentpay_trade	customer_name	
+customer_name  VARCHAR:20
+fieldStr:sub_channel_code	recondb	java.lang.String		VARCHAR	agentpay_trade	sub_channel_code	
+sub_channel_code  VARCHAR:10
+fieldStr:channel_trade_no	recondb	java.lang.String		VARCHAR	agentpay_trade	channel_trade_no	
+channel_trade_no  VARCHAR:45
+fieldStr:status	recondb	java.lang.Integer		TINYINT	agentpay_trade	status	
+status  TINYINT:4
+fieldStr:batch_no	recondb	java.lang.String		VARCHAR	agentpay_trade	batch_no	
+batch_no  VARCHAR:45
+fieldStr:trade_day	recondb	java.lang.String		VARCHAR	agentpay_trade	trade_day	
+trade_day  VARCHAR:8
+fieldStr:recon_date	recondb	java.sql.Timestamp		TIMESTAMP	agentpay_trade	recon_date	
+recon_date  TIMESTAMP:19
+fieldStr:channel_code	recondb	java.lang.String		VARCHAR	agentpay_trade	channel_code	
+channel_code  VARCHAR:10
+fieldStr:recon_no	recondb	java.lang.String		VARCHAR	agentpay_trade	recon_no	
+recon_no  VARCHAR:45
+fieldStr:trade_no	recondb	java.lang.String		VARCHAR	agentpay_trade	trade_no	
+trade_no  VARCHAR:45
+fieldStr:amount	recondb	java.math.BigInteger		BIGINT UNSIGNED	agentpay_trade	amount	
+amount  BIGINT UNSIGNED:20
+fieldStr:fee	recondb	java.math.BigInteger		BIGINT UNSIGNED	agentpay_trade	fee	
+fee  BIGINT UNSIGNED:20
+fieldStr:trade_date	recondb	java.sql.Timestamp		TIMESTAMP	agentpay_trade	trade_date	
+trade_date  TIMESTAMP:19
+fieldStr:customer_trade_no	recondb	java.lang.String		VARCHAR	agentpay_trade	customer_trade_no	
+customer_trade_no  VARCHAR:45
+fieldStr:id	recondb	java.math.BigInteger		BIGINT UNSIGNED	agentpay_trade	id	
+id  BIGINT UNSIGNED:20
+fieldStr:created_at	recondb	java.sql.Timestamp		TIMESTAMP	agentpay_trade	created_at	
+created_at  TIMESTAMP:19
+fieldStr:updated_at	recondb	java.sql.Timestamp		TIMESTAMP	agentpay_trade	updated_at	
+updated_at  TIMESTAMP:19
+fieldStr:deleted_at	recondb	java.sql.Timestamp		TIMESTAMP	agentpay_trade	deleted_at	
+deleted_at  TIMESTAMP:19
+--data--
+----tableName:recon_exp----
+fieldStr:service_trade_id	recondb	java.math.BigInteger		BIGINT UNSIGNED	recon_exp	service_trade_id	
+service_trade_id  BIGINT UNSIGNED:20
+fieldStr:extra_service_trade_id	recondb	java.math.BigInteger		BIGINT UNSIGNED	recon_exp	extra_service_trade_id	
+extra_service_trade_id  BIGINT UNSIGNED:20
+fieldStr:channel_code	recondb	java.lang.String		VARCHAR	recon_exp	channel_code	
+channel_code  VARCHAR:10
+fieldStr:batch_no	recondb	java.lang.String		VARCHAR	recon_exp	batch_no	
+batch_no  VARCHAR:45
+fieldStr:service_type	recondb	java.lang.String		VARCHAR	recon_exp	service_type	
+service_type  VARCHAR:3
+fieldStr:trade_day	recondb	java.lang.String		VARCHAR	recon_exp	trade_day	
+trade_day  VARCHAR:8
+fieldStr:operator_name	recondb	java.lang.String		VARCHAR	recon_exp	operator_name	
+operator_name  VARCHAR:45
+fieldStr:status	recondb	java.lang.Integer		TINYINT	recon_exp	status	
+status  TINYINT:4
+fieldStr:exp_code	recondb	java.lang.Boolean		TINYINT	recon_exp	exp_code	
+exp_code  TINYINT:1
+fieldStr:exp_reason	recondb	java.lang.String		VARCHAR	recon_exp	exp_reason	
+exp_reason  VARCHAR:45
+fieldStr:adjust_date	recondb	java.sql.Timestamp		TIMESTAMP	recon_exp	adjust_date	
+adjust_date  TIMESTAMP:19
+fieldStr:adjust_reason	recondb	java.lang.String		VARCHAR	recon_exp	adjust_reason	
+adjust_reason  VARCHAR:45
+fieldStr:id	recondb	java.math.BigInteger		BIGINT UNSIGNED	recon_exp	id	
+id  BIGINT UNSIGNED:20
+fieldStr:created_at	recondb	java.sql.Timestamp		TIMESTAMP	recon_exp	created_at	
+created_at  TIMESTAMP:19
+fieldStr:updated_at	recondb	java.sql.Timestamp		TIMESTAMP	recon_exp	updated_at	
+updated_at  TIMESTAMP:19
+fieldStr:deleted_at	recondb	java.sql.Timestamp		TIMESTAMP	recon_exp	deleted_at	
+deleted_at  TIMESTAMP:19
+--data--
+----tableName:recon_import----
+fieldStr:total_count	recondb	java.lang.Long		INT UNSIGNED	recon_import	total_count	
+total_count  INT UNSIGNED:10
+fieldStr:check_code	recondb	java.lang.String		VARCHAR	recon_import	check_code	
+check_code  VARCHAR:64
+fieldStr:operator_type	recondb	java.lang.Integer		TINYINT	recon_import	operator_type	
+operator_type  TINYINT:4
+fieldStr:id	recondb	java.math.BigInteger		BIGINT UNSIGNED	recon_import	id	
+id  BIGINT UNSIGNED:20
+fieldStr:created_at	recondb	java.sql.Timestamp		TIMESTAMP	recon_import	created_at	
+created_at  TIMESTAMP:19
+fieldStr:updated_at	recondb	java.sql.Timestamp		TIMESTAMP	recon_import	updated_at	
+updated_at  TIMESTAMP:19
+fieldStr:deleted_at	recondb	java.sql.Timestamp		TIMESTAMP	recon_import	deleted_at	
+deleted_at  TIMESTAMP:19
+fieldStr:batch_no	recondb	java.lang.String		VARCHAR	recon_import	batch_no	
+batch_no  VARCHAR:45
+fieldStr:trade_day	recondb	java.lang.String		VARCHAR	recon_import	trade_day	
+trade_day  VARCHAR:8
+fieldStr:channel_code	recondb	java.lang.String		VARCHAR	recon_import	channel_code	
+channel_code  VARCHAR:10
+fieldStr:service_type	recondb	java.lang.String		VARCHAR	recon_import	service_type	
+service_type  VARCHAR:3
+fieldStr:status	recondb	java.lang.Integer		TINYINT	recon_import	status	
+status  TINYINT:4
+fieldStr:exp_reason	recondb	java.lang.String		VARCHAR	recon_import	exp_reason	
+exp_reason  VARCHAR:45
+fieldStr:try_times	recondb	java.lang.Integer		TINYINT	recon_import	try_times	
+try_times  TINYINT:4
+fieldStr:start_at	recondb	java.sql.Timestamp		TIMESTAMP	recon_import	start_at	
+start_at  TIMESTAMP:19
+fieldStr:end_at	recondb	java.sql.Timestamp		TIMESTAMP	recon_import	end_at	
+end_at  TIMESTAMP:19
+--data--
+----tableName:recon_result----
+fieldStr:operator_type	recondb	java.lang.Integer		TINYINT	recon_result	operator_type	
+operator_type  TINYINT:4
+fieldStr:channel_trade_count	recondb	java.lang.Long		INT UNSIGNED	recon_result	channel_trade_count	
+channel_trade_count  INT UNSIGNED:10
+fieldStr:channel_trade_amount	recondb	java.math.BigInteger		BIGINT UNSIGNED	recon_result	channel_trade_amount	
+channel_trade_amount  BIGINT UNSIGNED:20
+fieldStr:channel_trade_fee	recondb	java.math.BigInteger		BIGINT UNSIGNED	recon_result	channel_trade_fee	
+channel_trade_fee  BIGINT UNSIGNED:20
+fieldStr:platform_trade_count	recondb	java.lang.Long		INT UNSIGNED	recon_result	platform_trade_count	
+platform_trade_count  INT UNSIGNED:10
+fieldStr:platform_trade_amount	recondb	java.math.BigInteger		BIGINT UNSIGNED	recon_result	platform_trade_amount	
+platform_trade_amount  BIGINT UNSIGNED:20
+fieldStr:platform_trade_fee	recondb	java.math.BigInteger		BIGINT UNSIGNED	recon_result	platform_trade_fee	
+platform_trade_fee  BIGINT UNSIGNED:20
+fieldStr:platform_channel_code	recondb	java.lang.String		VARCHAR	recon_result	platform_channel_code	
+platform_channel_code  VARCHAR:10
+fieldStr:exp_count	recondb	java.lang.Long		INT UNSIGNED	recon_result	exp_count	
+exp_count  INT UNSIGNED:10
+fieldStr:exp_amount	recondb	java.math.BigInteger		BIGINT UNSIGNED	recon_result	exp_amount	
+exp_amount  BIGINT UNSIGNED:20
+fieldStr:id	recondb	java.math.BigInteger		BIGINT UNSIGNED	recon_result	id	
+id  BIGINT UNSIGNED:20
+fieldStr:created_at	recondb	java.sql.Timestamp		TIMESTAMP	recon_result	created_at	
+created_at  TIMESTAMP:19
+fieldStr:updated_at	recondb	java.sql.Timestamp		TIMESTAMP	recon_result	updated_at	
+updated_at  TIMESTAMP:19
+fieldStr:deleted_at	recondb	java.sql.Timestamp		TIMESTAMP	recon_result	deleted_at	
+deleted_at  TIMESTAMP:19
+fieldStr:batch_no	recondb	java.lang.String		VARCHAR	recon_result	batch_no	
+batch_no  VARCHAR:45
+fieldStr:trade_day	recondb	java.lang.String		VARCHAR	recon_result	trade_day	
+trade_day  VARCHAR:8
+fieldStr:channel_code	recondb	java.lang.String		VARCHAR	recon_result	channel_code	
+channel_code  VARCHAR:10
+fieldStr:service_type	recondb	java.lang.String		VARCHAR	recon_result	service_type	
+service_type  VARCHAR:3
+fieldStr:status	recondb	java.lang.Integer		TINYINT	recon_result	status	
+status  TINYINT:4
+fieldStr:exp_reason	recondb	java.lang.String		VARCHAR	recon_result	exp_reason	
+exp_reason  VARCHAR:45
+fieldStr:try_times	recondb	java.lang.Integer		TINYINT	recon_result	try_times	
+try_times  TINYINT:4
+fieldStr:start_at	recondb	java.sql.Timestamp		TIMESTAMP	recon_result	start_at	
+start_at  TIMESTAMP:19
+fieldStr:end_at	recondb	java.sql.Timestamp		TIMESTAMP	recon_result	end_at	
+end_at  TIMESTAMP:19
+--data--
+--------dbName:sys-------
+----tableName:sys_config----
+fieldStr:variable	sys	java.lang.String		VARCHAR	sys_config	variable	
+variable  VARCHAR:128
+fieldStr:value	sys	java.lang.String		VARCHAR	sys_config	value	
+value  VARCHAR:128
+fieldStr:set_time	sys	java.sql.Timestamp		TIMESTAMP	sys_config	set_time	
+set_time  TIMESTAMP:19
+fieldStr:set_by	sys	java.lang.String		VARCHAR	sys_config	set_by	
+set_by  VARCHAR:128
+--data--
+
+
+
+
+
+
+----tableName:host_summary----

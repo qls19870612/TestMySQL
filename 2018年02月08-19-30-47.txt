@@ -1,0 +1,1071 @@
+MySQL Connector Java
+5.7
+0
+4
+--------------dbNames------------
+agent_platform
+dbadmin
+ifpay_risk
+ifpay_security
+information_schema
+mysql
+performance_schema
+recondb
+sys
+test
+--------------tableNames------------
+start------dbName:agent_platform------
+account
+accounttransaction
+agent
+agentglobalservicecfg
+agentnew
+agentrole
+bankcard
+company
+liquidation
+merchant
+operatelog
+productcontract
+productfeerule
+servicecaptchacode
+settle
+trade
+user
+withdraw
+end------dbName:agent_platform------
+start------dbName:dbadmin------
+schema_version
+end------dbName:dbadmin------
+start------dbName:ifpay_risk------
+agentpay_risk_info
+merchant_risk_info
+pay_risk_info
+end------dbName:ifpay_risk------
+start------dbName:ifpay_security------
+security_merchant_key
+end------dbName:ifpay_security------
+start------dbName:information_schema------
+end------dbName:information_schema------
+start------dbName:mysql------
+end------dbName:mysql------
+start------dbName:performance_schema------
+end------dbName:performance_schema------
+start------dbName:recondb------
+acquire_trade
+agentpay_trade
+recon_exp
+recon_import
+recon_result
+end------dbName:recondb------
+start------dbName:sys------
+sys_config
+host_summary
+host_summary_by_file_io
+host_summary_by_file_io_type
+host_summary_by_stages
+host_summary_by_statement_latency
+host_summary_by_statement_type
+innodb_buffer_stats_by_schema
+innodb_buffer_stats_by_table
+innodb_lock_waits
+io_by_thread_by_latency
+io_global_by_file_by_bytes
+io_global_by_file_by_latency
+io_global_by_wait_by_bytes
+io_global_by_wait_by_latency
+latest_file_io
+memory_by_host_by_current_bytes
+memory_by_thread_by_current_bytes
+memory_by_user_by_current_bytes
+memory_global_by_current_bytes
+memory_global_total
+metrics
+processlist
+ps_check_lost_instrumentation
+schema_auto_increment_columns
+schema_index_statistics
+schema_object_overview
+schema_redundant_indexes
+schema_table_lock_waits
+schema_table_statistics
+schema_table_statistics_with_buffer
+schema_tables_with_full_table_scans
+schema_unused_indexes
+session
+session_ssl_status
+statement_analysis
+statements_with_errors_or_warnings
+statements_with_full_table_scans
+statements_with_runtimes_in_95th_percentile
+statements_with_sorting
+statements_with_temp_tables
+user_summary
+user_summary_by_file_io
+user_summary_by_file_io_type
+user_summary_by_stages
+user_summary_by_statement_latency
+user_summary_by_statement_type
+version
+wait_classes_global_by_avg_latency
+wait_classes_global_by_latency
+waits_by_host_by_latency
+waits_by_user_by_latency
+waits_global_by_latency
+x$host_summary
+x$host_summary_by_file_io
+x$host_summary_by_file_io_type
+x$host_summary_by_stages
+x$host_summary_by_statement_latency
+x$host_summary_by_statement_type
+x$innodb_buffer_stats_by_schema
+x$innodb_buffer_stats_by_table
+x$innodb_lock_waits
+x$io_by_thread_by_latency
+x$io_global_by_file_by_bytes
+x$io_global_by_file_by_latency
+x$io_global_by_wait_by_bytes
+x$io_global_by_wait_by_latency
+x$latest_file_io
+x$memory_by_host_by_current_bytes
+x$memory_by_thread_by_current_bytes
+x$memory_by_user_by_current_bytes
+x$memory_global_by_current_bytes
+x$memory_global_total
+x$processlist
+x$ps_digest_95th_percentile_by_avg_us
+x$ps_digest_avg_latency_distribution
+x$ps_schema_table_statistics_io
+x$schema_flattened_keys
+x$schema_index_statistics
+x$schema_table_lock_waits
+x$schema_table_statistics
+x$schema_table_statistics_with_buffer
+x$schema_tables_with_full_table_scans
+x$session
+x$statement_analysis
+x$statements_with_errors_or_warnings
+x$statements_with_full_table_scans
+x$statements_with_runtimes_in_95th_percentile
+x$statements_with_sorting
+x$statements_with_temp_tables
+x$user_summary
+x$user_summary_by_file_io
+x$user_summary_by_file_io_type
+x$user_summary_by_stages
+x$user_summary_by_statement_latency
+x$user_summary_by_statement_type
+x$wait_classes_global_by_avg_latency
+x$wait_classes_global_by_latency
+x$waits_by_host_by_latency
+x$waits_by_user_by_latency
+x$waits_global_by_latency
+end------dbName:sys------
+start------dbName:test------
+end------dbName:test------
+--------------tableStructs------------
+--------dbName: dbadmin -------
+----tableName: schema_version ----
+installed_rank  INT:11
+version  VARCHAR:50
+description  VARCHAR:200
+type  VARCHAR:20
+script  VARCHAR:1000
+checksum  INT:11
+installed_by  VARCHAR:100
+installed_on  TIMESTAMP:19
+execution_time  INT:11
+success  TINYINT:1
+--data--
+--------dbName: information_schema -------
+--------dbName: performance_schema -------
+--------dbName: test -------
+--------dbName: agent_platform -------
+----tableName: account ----
+id  INT:11
+amount  BIGINT UNSIGNED:20
+settle_amount  BIGINT UNSIGNED:20
+bail_amount  BIGINT UNSIGNED:20
+agent_no  VARCHAR:45
+account_no  VARCHAR:50
+created_at  DATETIME:19
+updated_at  DATETIME:19
+--data--
+----tableName: accounttransaction ----
+id  INT:11
+serial_no  VARCHAR:50
+transfer_command_code  VARCHAR:50
+direction  VARCHAR:15
+transfer_type  VARCHAR:15
+transfer_amount  BIGINT UNSIGNED:20
+pre_amount  BIGINT UNSIGNED:20
+amount  BIGINT UNSIGNED:20
+remark  VARCHAR:25
+transfer_time  DATETIME:19
+agent_no  VARCHAR:45
+account_no  VARCHAR:50
+created_at  DATETIME:19
+updated_at  DATETIME:19
+--data--
+----tableName: agent ----
+id  INT:11
+name  VARCHAR:50
+register_time  DATETIME:19
+register_ip  VARCHAR:25
+pay_password  VARCHAR:50
+phone_no  VARCHAR:15
+applicant  VARCHAR:15
+status  VARCHAR:15
+check_time  DATETIME:19
+checker_name  VARCHAR:15
+check_remark  VARCHAR:50
+agent_no  VARCHAR:45
+created_at  DATETIME:19
+updated_at  DATETIME:19
+--data--
+----tableName: agentglobalservicecfg ----
+id  INT:11
+name  VARCHAR:25
+display_name  VARCHAR:25
+is_visible  TINYINT:1
+invoice_tax_ratio  DOUBLE:22
+single_withdraw_fee_amount  BIGINT UNSIGNED:20
+description  VARCHAR:100
+extend  VARCHAR:20
+created_at  DATETIME:19
+updated_at  DATETIME:19
+--data--
+----tableName: agentnew ----
+id  INT:11
+original_agent_no  VARCHAR:45
+register_ip  VARCHAR:25
+phone_no  VARCHAR:15
+applicant  VARCHAR:15
+status  VARCHAR:15
+client_type  VARCHAR:10
+fullname  VARCHAR:20
+shortname  VARCHAR:20
+address  VARCHAR:50
+legal_person_name  VARCHAR:20
+legal_person_id  VARCHAR:30
+legal_person_id_img  VARCHAR:20
+legal_person_id_back_img  VARCHAR:20
+web_site  VARCHAR:50
+logo_img  VARCHAR:50
+is3cards_in1  VARCHAR:255
+organization_code  VARCHAR:50
+business_license_no  VARCHAR:50
+business_license_img  VARCHAR:100
+tax_register_no  VARCHAR:50
+social_credit_code  VARCHAR:50
+business_contacter_phone_no  VARCHAR:11
+business_contacter_name  VARCHAR:25
+business_contacter_email  VARCHAR:50
+social_credit_code_img  VARCHAR:50
+tax_register_no_img  VARCHAR:50
+organization_code_img  VARCHAR:50
+open_account_img  VARCHAR:50
+bis_scope  VARCHAR:40
+email  VARCHAR:50
+agent_role_id  VARCHAR:50
+card_no  VARCHAR:50
+card_name  VARCHAR:25
+bank_name  VARCHAR:25
+bank_branch_name  VARCHAR:25
+is_default  VARCHAR:255
+bail_amount  BIGINT UNSIGNED:20
+clean_period_type  VARCHAR:15
+settle_period_type  VARCHAR:15
+expire_time  DATETIME:19
+effective_time  DATETIME:19
+create_time  DATETIME:19
+register_time  DATETIME:19
+check_time  DATETIME:19
+checker_name  VARCHAR:15
+check_remark  VARCHAR:50
+agent_no  VARCHAR:45
+account_no  VARCHAR:50
+created_at  DATETIME:19
+updated_at  DATETIME:19
+--data--
+----tableName: agentrole ----
+id  INT:11
+name  VARCHAR:25
+display_name  VARCHAR:25
+authority  VARCHAR:15
+agent_no  VARCHAR:45
+created_at  DATETIME:19
+updated_at  DATETIME:19
+--data--
+----tableName: bankcard ----
+id  INT:11
+is_default  TINYINT:1
+agent_no  VARCHAR:45
+card_no  VARCHAR:50
+card_name  VARCHAR:25
+bank_name  VARCHAR:25
+bank_branch_name  VARCHAR:25
+created_at  DATETIME:19
+updated_at  DATETIME:19
+--data--
+----tableName: company ----
+id  INT:11
+client_type  VARCHAR:10
+fullname  VARCHAR:20
+shortname  VARCHAR:20
+address  VARCHAR:50
+legal_person_name  VARCHAR:20
+legal_person_id  VARCHAR:30
+legal_person_id_img  VARCHAR:20
+legal_person_id_back_img  VARCHAR:20
+web_site  VARCHAR:50
+logo_img  VARCHAR:50
+is3cards_in1  VARCHAR:255
+organization_code  VARCHAR:50
+business_license_no  VARCHAR:50
+business_license_img  VARCHAR:100
+tax_register_no  VARCHAR:50
+social_credit_code  VARCHAR:50
+business_contacter_phone_no  VARCHAR:11
+business_contacter_name  VARCHAR:25
+business_contacter_email  VARCHAR:50
+social_credit_code_img  VARCHAR:50
+tax_register_no_img  VARCHAR:50
+organization_code_img  VARCHAR:50
+open_account_img  VARCHAR:50
+bis_scope  VARCHAR:255
+agent_no  VARCHAR:45
+created_at  DATETIME:19
+updated_at  DATETIME:19
+--data--
+----tableName: liquidation ----
+id  INT:11
+liquidate_serial_no  VARCHAR:50
+parent_liquidate_serial_no  VARCHAR:50
+settle_serial_no  VARCHAR:50
+settle_detail_serial_no  VARCHAR:50
+trade_time  DATETIME:19
+total_count  INT:11
+total_amount  BIGINT UNSIGNED:20
+start_time  DATETIME:19
+end_time  DATETIME:19
+status  TINYINT:1
+reason  VARCHAR:50
+agent_no  VARCHAR:45
+trade_type  VARCHAR:10
+trade_way  VARCHAR:15
+merchant_fee_ratio  DOUBLE:22
+agent_fee_ratio  DOUBLE:22
+merchant_no  VARCHAR:45
+merchant_name  VARCHAR:20
+agent_username  VARCHAR:50
+created_at  DATETIME:19
+updated_at  DATETIME:19
+type  VARCHAR:15
+fee_split_amount  BIGINT UNSIGNED:20
+--data--
+----tableName: merchant ----
+id  INT:11
+name  VARCHAR:50
+phone_no  VARCHAR:15
+register_time  DATETIME:19
+register_ip  VARCHAR:255
+industry_type  VARCHAR:20
+applicant  VARCHAR:15
+check_time  DATETIME:19
+checker_name  VARCHAR:15
+check_remark  VARCHAR:50
+status  VARCHAR:15
+email  VARCHAR:50
+agent_no  VARCHAR:45
+merchant_no  VARCHAR:45
+created_at  DATETIME:19
+updated_at  DATETIME:19
+--data--
+----tableName: operatelog ----
+id  INT:11
+operator_name  VARCHAR:25
+action_name  VARCHAR:25
+clinet_ip  VARCHAR:20
+client_device_info  VARCHAR:50
+remark  VARCHAR:100
+agent_no  VARCHAR:45
+created_at  DATETIME:19
+updated_at  DATETIME:19
+--data--
+----tableName: productcontract ----
+id  INT:11
+contract_no  VARCHAR:50
+bail_amount  BIGINT UNSIGNED:20
+clean_period_type  VARCHAR:15
+settle_period_type  VARCHAR:15
+expire_time  DATETIME:19
+effective_time  DATETIME:19
+agent_no  VARCHAR:45
+created_at  DATETIME:19
+updated_at  DATETIME:19
+--data--
+----tableName: productfeerule ----
+id  INT:11
+industry_type  VARCHAR:20
+calculate_type  VARCHAR:50
+fee_rate  DOUBLE:22
+agent_no  VARCHAR:45
+trade_type  VARCHAR:10
+trade_way  VARCHAR:15
+created_at  DATETIME:19
+updated_at  DATETIME:19
+--data--
+----tableName: servicecaptchacode ----
+id  INT:11
+user_id  VARCHAR:20
+send_type  TINYINT:1
+status  TINYINT:1
+expire_time  DATETIME:19
+ip  VARCHAR:25
+code  VARCHAR:30
+agent_no  VARCHAR:45
+created_at  DATETIME:19
+updated_at  DATETIME:19
+--data--
+----tableName: settle ----
+id  INT:11
+parent_settle_serial_no  VARCHAR:50
+settle_serial_no  VARCHAR:50
+trade_time  DATETIME:19
+total_count  INT:11
+total_amount  BIGINT UNSIGNED:20
+fee_split_amount  BIGINT UNSIGNED:20
+start_time  DATETIME:19
+end_time  DATETIME:19
+status  TINYINT:1
+reason  VARCHAR:50
+agent_no  VARCHAR:45
+trade_type  VARCHAR:10
+trade_way  VARCHAR:15
+merchant_no  VARCHAR:45
+merchant_name  VARCHAR:20
+agent_username  VARCHAR:50
+created_at  DATETIME:19
+updated_at  DATETIME:19
+type  VARCHAR:15
+--data--
+----tableName: trade ----
+id  INT:11
+merchant_name  VARCHAR:50
+order_no  VARCHAR:45
+order_detail_no  VARCHAR:45
+amount  BIGINT UNSIGNED:20
+fee_amount  BIGINT UNSIGNED:20
+trade_time  DATETIME:19
+liquidate_serial_no  VARCHAR:45
+liquidate_detail_serial_no  VARCHAR:45
+liquidate_time  DATETIME:19
+settle_serial_no  VARCHAR:45
+settle_detail_serial_no  VARCHAR:45
+setle_time  DATETIME:19
+fee_split_amount  BIGINT UNSIGNED:20
+fee_split_status  VARCHAR:20
+fee_split_reason  VARCHAR:255
+agent_no  VARCHAR:45
+trade_type  VARCHAR:10
+trade_way  VARCHAR:15
+merchant_fee_ratio  DOUBLE:22
+agent_fee_ratio  DOUBLE:22
+agent_username  VARCHAR:50
+merchant_no  VARCHAR:45
+created_at  DATETIME:19
+updated_at  DATETIME:19
+fee_split_detail_reason  VARCHAR:255
+--data--
+----tableName: user ----
+id  INT:11
+user_name  VARCHAR:25
+init_password  VARCHAR:50
+password  VARCHAR:50
+random_key  VARCHAR:128
+email  VARCHAR:50
+phone_no  VARCHAR:11
+head_img  VARCHAR:100
+login_times  INT:11
+last_login_time  DATETIME:19
+last_login_ip  VARCHAR:20
+agent_role_id  VARCHAR:50
+register_time  DATETIME:19
+register_ip  VARCHAR:20
+status  TINYINT:1
+create_time  DATETIME:19
+client_type  VARCHAR:10
+agent_no  VARCHAR:45
+created_at  DATETIME:19
+updated_at  DATETIME:19
+access_token  VARCHAR:50
+init_type  VARCHAR:15
+--data--
+----tableName: withdraw ----
+id  INT:11
+serial_no  VARCHAR:50
+user_id  VARCHAR:25
+user_name  VARCHAR:25
+request_amount  BIGINT UNSIGNED:20
+invoice_type  VARCHAR:15
+amount  BIGINT UNSIGNED:20
+single_withdraw_fee_amount  BIGINT UNSIGNED:20
+invoice_tax_ratio  DOUBLE:22
+status  VARCHAR:15
+remark  VARCHAR:25
+apply_time  DATETIME:19
+express_order_no  VARCHAR:50
+express_company_name  VARCHAR:50
+checker_name  VARCHAR:20
+agent_no  VARCHAR:45
+agent_username  VARCHAR:50
+card_no  VARCHAR:50
+card_name  VARCHAR:25
+bank_name  VARCHAR:25
+bank_branch_name  VARCHAR:25
+created_at  DATETIME:19
+updated_at  DATETIME:19
+--data--
+--------dbName: mysql -------
+--------dbName: recondb -------
+----tableName: acquire_trade ----
+trade_way  VARCHAR:10
+customer_no  VARCHAR:45
+customer_name  VARCHAR:20
+sub_channel_code  VARCHAR:10
+channel_trade_no  VARCHAR:45
+status  TINYINT:4
+batch_no  VARCHAR:45
+trade_day  VARCHAR:8
+recon_date  TIMESTAMP:19
+channel_code  VARCHAR:10
+recon_no  VARCHAR:45
+trade_no  VARCHAR:45
+amount  BIGINT UNSIGNED:20
+fee  BIGINT UNSIGNED:20
+trade_date  TIMESTAMP:19
+customer_trade_no  VARCHAR:45
+id  BIGINT UNSIGNED:20
+created_at  TIMESTAMP:19
+updated_at  TIMESTAMP:19
+deleted_at  TIMESTAMP:19
+--data--
+----tableName: agentpay_trade ----
+card_name  VARCHAR:20
+card_no  VARCHAR:20
+customer_no  VARCHAR:45
+customer_name  VARCHAR:20
+sub_channel_code  VARCHAR:10
+channel_trade_no  VARCHAR:45
+status  TINYINT:4
+batch_no  VARCHAR:45
+trade_day  VARCHAR:8
+recon_date  TIMESTAMP:19
+channel_code  VARCHAR:10
+recon_no  VARCHAR:45
+trade_no  VARCHAR:45
+amount  BIGINT UNSIGNED:20
+fee  BIGINT UNSIGNED:20
+trade_date  TIMESTAMP:19
+customer_trade_no  VARCHAR:45
+id  BIGINT UNSIGNED:20
+created_at  TIMESTAMP:19
+updated_at  TIMESTAMP:19
+deleted_at  TIMESTAMP:19
+--data--
+----tableName: recon_exp ----
+service_trade_id  BIGINT UNSIGNED:20
+extra_service_trade_id  BIGINT UNSIGNED:20
+channel_code  VARCHAR:10
+batch_no  VARCHAR:45
+service_type  VARCHAR:3
+trade_day  VARCHAR:8
+operator_name  VARCHAR:45
+status  TINYINT:4
+exp_code  TINYINT:1
+exp_reason  VARCHAR:45
+adjust_date  TIMESTAMP:19
+adjust_reason  VARCHAR:45
+id  BIGINT UNSIGNED:20
+created_at  TIMESTAMP:19
+updated_at  TIMESTAMP:19
+deleted_at  TIMESTAMP:19
+--data--
+----tableName: recon_import ----
+total_count  INT UNSIGNED:10
+check_code  VARCHAR:64
+operator_type  TINYINT:4
+id  BIGINT UNSIGNED:20
+created_at  TIMESTAMP:19
+updated_at  TIMESTAMP:19
+deleted_at  TIMESTAMP:19
+batch_no  VARCHAR:45
+trade_day  VARCHAR:8
+channel_code  VARCHAR:10
+service_type  VARCHAR:3
+status  TINYINT:4
+exp_reason  VARCHAR:45
+try_times  TINYINT:4
+start_at  TIMESTAMP:19
+end_at  TIMESTAMP:19
+--data--
+----tableName: recon_result ----
+operator_type  TINYINT:4
+channel_trade_count  INT UNSIGNED:10
+channel_trade_amount  BIGINT UNSIGNED:20
+channel_trade_fee  BIGINT UNSIGNED:20
+platform_trade_count  INT UNSIGNED:10
+platform_trade_amount  BIGINT UNSIGNED:20
+platform_trade_fee  BIGINT UNSIGNED:20
+platform_channel_code  VARCHAR:10
+exp_count  INT UNSIGNED:10
+exp_amount  BIGINT UNSIGNED:20
+id  BIGINT UNSIGNED:20
+created_at  TIMESTAMP:19
+updated_at  TIMESTAMP:19
+deleted_at  TIMESTAMP:19
+batch_no  VARCHAR:45
+trade_day  VARCHAR:8
+channel_code  VARCHAR:10
+service_type  VARCHAR:3
+status  TINYINT:4
+exp_reason  VARCHAR:45
+try_times  TINYINT:4
+start_at  TIMESTAMP:19
+end_at  TIMESTAMP:19
+--data--
+--------dbName: sys -------
+----tableName: sys_config ----
+variable  VARCHAR:128
+value  VARCHAR:128
+set_time  TIMESTAMP:19
+set_by  VARCHAR:128
+--data--
+
+
+
+
+
+
+----tableName: host_summary ----
+============================================================fieldStr: getScale	0	getPrecision	11	getColumnName	installed_rank	getColumnTypeName	INT	getColumnDisplaySize	11	isNullable	0	getTableName	schema_version	getColumnType	4	getCatalogName	dbadmin	getColumnClassName	java.lang.Integer	getSchemaName		getColumnLabel	installed_rank	
+fieldStr: getScale	0	getPrecision	50	getColumnName	version	getColumnTypeName	VARCHAR	getColumnDisplaySize	50	isNullable	1	getTableName	schema_version	getColumnType	12	getCatalogName	dbadmin	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	version	
+fieldStr: getScale	0	getPrecision	200	getColumnName	description	getColumnTypeName	VARCHAR	getColumnDisplaySize	200	isNullable	0	getTableName	schema_version	getColumnType	12	getCatalogName	dbadmin	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	description	
+fieldStr: getScale	0	getPrecision	20	getColumnName	type	getColumnTypeName	VARCHAR	getColumnDisplaySize	20	isNullable	0	getTableName	schema_version	getColumnType	12	getCatalogName	dbadmin	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	type	
+fieldStr: getScale	0	getPrecision	1000	getColumnName	script	getColumnTypeName	VARCHAR	getColumnDisplaySize	1000	isNullable	0	getTableName	schema_version	getColumnType	12	getCatalogName	dbadmin	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	script	
+fieldStr: getScale	0	getPrecision	11	getColumnName	checksum	getColumnTypeName	INT	getColumnDisplaySize	11	isNullable	1	getTableName	schema_version	getColumnType	4	getCatalogName	dbadmin	getColumnClassName	java.lang.Integer	getSchemaName		getColumnLabel	checksum	
+fieldStr: getScale	0	getPrecision	100	getColumnName	installed_by	getColumnTypeName	VARCHAR	getColumnDisplaySize	100	isNullable	0	getTableName	schema_version	getColumnType	12	getCatalogName	dbadmin	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	installed_by	
+fieldStr: getScale	0	getPrecision	19	getColumnName	installed_on	getColumnTypeName	TIMESTAMP	getColumnDisplaySize	19	isNullable	0	getTableName	schema_version	getColumnType	93	getCatalogName	dbadmin	getColumnClassName	java.sql.Timestamp	getSchemaName		getColumnLabel	installed_on	
+fieldStr: getScale	0	getPrecision	11	getColumnName	execution_time	getColumnTypeName	INT	getColumnDisplaySize	11	isNullable	0	getTableName	schema_version	getColumnType	4	getCatalogName	dbadmin	getColumnClassName	java.lang.Integer	getSchemaName		getColumnLabel	execution_time	
+fieldStr: getScale	0	getPrecision	1	getColumnName	success	getColumnTypeName	TINYINT	getColumnDisplaySize	1	isNullable	0	getTableName	schema_version	getColumnType	-7	getCatalogName	dbadmin	getColumnClassName	java.lang.Boolean	getSchemaName		getColumnLabel	success	
+fieldStr: getScale	0	getPrecision	11	getColumnName	id	getColumnTypeName	INT	getColumnDisplaySize	11	isNullable	0	getTableName	account	getColumnType	4	getCatalogName	agent_platform	getColumnClassName	java.lang.Integer	getSchemaName		getColumnLabel	id	
+fieldStr: getScale	0	getPrecision	20	getColumnName	amount	getColumnTypeName	BIGINT UNSIGNED	getColumnDisplaySize	20	isNullable	0	getTableName	account	getColumnType	-5	getCatalogName	agent_platform	getColumnClassName	java.math.BigInteger	getSchemaName		getColumnLabel	amount	
+fieldStr: getScale	0	getPrecision	20	getColumnName	settle_amount	getColumnTypeName	BIGINT UNSIGNED	getColumnDisplaySize	20	isNullable	0	getTableName	account	getColumnType	-5	getCatalogName	agent_platform	getColumnClassName	java.math.BigInteger	getSchemaName		getColumnLabel	settle_amount	
+fieldStr: getScale	0	getPrecision	20	getColumnName	bail_amount	getColumnTypeName	BIGINT UNSIGNED	getColumnDisplaySize	20	isNullable	0	getTableName	account	getColumnType	-5	getCatalogName	agent_platform	getColumnClassName	java.math.BigInteger	getSchemaName		getColumnLabel	bail_amount	
+fieldStr: getScale	0	getPrecision	45	getColumnName	agent_no	getColumnTypeName	VARCHAR	getColumnDisplaySize	45	isNullable	0	getTableName	account	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	agent_no	
+fieldStr: getScale	0	getPrecision	50	getColumnName	account_no	getColumnTypeName	VARCHAR	getColumnDisplaySize	50	isNullable	0	getTableName	account	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	account_no	
+fieldStr: getScale	0	getPrecision	19	getColumnName	created_at	getColumnTypeName	DATETIME	getColumnDisplaySize	19	isNullable	0	getTableName	account	getColumnType	93	getCatalogName	agent_platform	getColumnClassName	java.sql.Timestamp	getSchemaName		getColumnLabel	created_at	
+fieldStr: getScale	0	getPrecision	19	getColumnName	updated_at	getColumnTypeName	DATETIME	getColumnDisplaySize	19	isNullable	0	getTableName	account	getColumnType	93	getCatalogName	agent_platform	getColumnClassName	java.sql.Timestamp	getSchemaName		getColumnLabel	updated_at	
+fieldStr: getScale	0	getPrecision	11	getColumnName	id	getColumnTypeName	INT	getColumnDisplaySize	11	isNullable	0	getTableName	accounttransaction	getColumnType	4	getCatalogName	agent_platform	getColumnClassName	java.lang.Integer	getSchemaName		getColumnLabel	id	
+fieldStr: getScale	0	getPrecision	50	getColumnName	serial_no	getColumnTypeName	VARCHAR	getColumnDisplaySize	50	isNullable	0	getTableName	accounttransaction	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	serial_no	
+fieldStr: getScale	0	getPrecision	50	getColumnName	transfer_command_code	getColumnTypeName	VARCHAR	getColumnDisplaySize	50	isNullable	0	getTableName	accounttransaction	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	transfer_command_code	
+fieldStr: getScale	0	getPrecision	15	getColumnName	direction	getColumnTypeName	VARCHAR	getColumnDisplaySize	15	isNullable	0	getTableName	accounttransaction	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	direction	
+fieldStr: getScale	0	getPrecision	15	getColumnName	transfer_type	getColumnTypeName	VARCHAR	getColumnDisplaySize	15	isNullable	0	getTableName	accounttransaction	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	transfer_type	
+fieldStr: getScale	0	getPrecision	20	getColumnName	transfer_amount	getColumnTypeName	BIGINT UNSIGNED	getColumnDisplaySize	20	isNullable	0	getTableName	accounttransaction	getColumnType	-5	getCatalogName	agent_platform	getColumnClassName	java.math.BigInteger	getSchemaName		getColumnLabel	transfer_amount	
+fieldStr: getScale	0	getPrecision	20	getColumnName	pre_amount	getColumnTypeName	BIGINT UNSIGNED	getColumnDisplaySize	20	isNullable	0	getTableName	accounttransaction	getColumnType	-5	getCatalogName	agent_platform	getColumnClassName	java.math.BigInteger	getSchemaName		getColumnLabel	pre_amount	
+fieldStr: getScale	0	getPrecision	20	getColumnName	amount	getColumnTypeName	BIGINT UNSIGNED	getColumnDisplaySize	20	isNullable	0	getTableName	accounttransaction	getColumnType	-5	getCatalogName	agent_platform	getColumnClassName	java.math.BigInteger	getSchemaName		getColumnLabel	amount	
+fieldStr: getScale	0	getPrecision	25	getColumnName	remark	getColumnTypeName	VARCHAR	getColumnDisplaySize	25	isNullable	0	getTableName	accounttransaction	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	remark	
+fieldStr: getScale	0	getPrecision	19	getColumnName	transfer_time	getColumnTypeName	DATETIME	getColumnDisplaySize	19	isNullable	1	getTableName	accounttransaction	getColumnType	93	getCatalogName	agent_platform	getColumnClassName	java.sql.Timestamp	getSchemaName		getColumnLabel	transfer_time	
+fieldStr: getScale	0	getPrecision	45	getColumnName	agent_no	getColumnTypeName	VARCHAR	getColumnDisplaySize	45	isNullable	0	getTableName	accounttransaction	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	agent_no	
+fieldStr: getScale	0	getPrecision	50	getColumnName	account_no	getColumnTypeName	VARCHAR	getColumnDisplaySize	50	isNullable	0	getTableName	accounttransaction	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	account_no	
+fieldStr: getScale	0	getPrecision	19	getColumnName	created_at	getColumnTypeName	DATETIME	getColumnDisplaySize	19	isNullable	0	getTableName	accounttransaction	getColumnType	93	getCatalogName	agent_platform	getColumnClassName	java.sql.Timestamp	getSchemaName		getColumnLabel	created_at	
+fieldStr: getScale	0	getPrecision	19	getColumnName	updated_at	getColumnTypeName	DATETIME	getColumnDisplaySize	19	isNullable	0	getTableName	accounttransaction	getColumnType	93	getCatalogName	agent_platform	getColumnClassName	java.sql.Timestamp	getSchemaName		getColumnLabel	updated_at	
+fieldStr: getScale	0	getPrecision	11	getColumnName	id	getColumnTypeName	INT	getColumnDisplaySize	11	isNullable	0	getTableName	agent	getColumnType	4	getCatalogName	agent_platform	getColumnClassName	java.lang.Integer	getSchemaName		getColumnLabel	id	
+fieldStr: getScale	0	getPrecision	50	getColumnName	name	getColumnTypeName	VARCHAR	getColumnDisplaySize	50	isNullable	1	getTableName	agent	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	name	
+fieldStr: getScale	0	getPrecision	19	getColumnName	register_time	getColumnTypeName	DATETIME	getColumnDisplaySize	19	isNullable	0	getTableName	agent	getColumnType	93	getCatalogName	agent_platform	getColumnClassName	java.sql.Timestamp	getSchemaName		getColumnLabel	register_time	
+fieldStr: getScale	0	getPrecision	25	getColumnName	register_ip	getColumnTypeName	VARCHAR	getColumnDisplaySize	25	isNullable	0	getTableName	agent	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	register_ip	
+fieldStr: getScale	0	getPrecision	50	getColumnName	pay_password	getColumnTypeName	VARCHAR	getColumnDisplaySize	50	isNullable	1	getTableName	agent	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	pay_password	
+fieldStr: getScale	0	getPrecision	15	getColumnName	phone_no	getColumnTypeName	VARCHAR	getColumnDisplaySize	15	isNullable	0	getTableName	agent	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	phone_no	
+fieldStr: getScale	0	getPrecision	15	getColumnName	applicant	getColumnTypeName	VARCHAR	getColumnDisplaySize	15	isNullable	0	getTableName	agent	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	applicant	
+fieldStr: getScale	0	getPrecision	15	getColumnName	status	getColumnTypeName	VARCHAR	getColumnDisplaySize	15	isNullable	0	getTableName	agent	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	status	
+fieldStr: getScale	0	getPrecision	19	getColumnName	check_time	getColumnTypeName	DATETIME	getColumnDisplaySize	19	isNullable	1	getTableName	agent	getColumnType	93	getCatalogName	agent_platform	getColumnClassName	java.sql.Timestamp	getSchemaName		getColumnLabel	check_time	
+fieldStr: getScale	0	getPrecision	15	getColumnName	checker_name	getColumnTypeName	VARCHAR	getColumnDisplaySize	15	isNullable	1	getTableName	agent	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	checker_name	
+fieldStr: getScale	0	getPrecision	50	getColumnName	check_remark	getColumnTypeName	VARCHAR	getColumnDisplaySize	50	isNullable	1	getTableName	agent	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	check_remark	
+fieldStr: getScale	0	getPrecision	45	getColumnName	agent_no	getColumnTypeName	VARCHAR	getColumnDisplaySize	45	isNullable	0	getTableName	agent	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	agent_no	
+fieldStr: getScale	0	getPrecision	19	getColumnName	created_at	getColumnTypeName	DATETIME	getColumnDisplaySize	19	isNullable	0	getTableName	agent	getColumnType	93	getCatalogName	agent_platform	getColumnClassName	java.sql.Timestamp	getSchemaName		getColumnLabel	created_at	
+fieldStr: getScale	0	getPrecision	19	getColumnName	updated_at	getColumnTypeName	DATETIME	getColumnDisplaySize	19	isNullable	0	getTableName	agent	getColumnType	93	getCatalogName	agent_platform	getColumnClassName	java.sql.Timestamp	getSchemaName		getColumnLabel	updated_at	
+fieldStr: getScale	0	getPrecision	11	getColumnName	id	getColumnTypeName	INT	getColumnDisplaySize	11	isNullable	0	getTableName	agentglobalservicecfg	getColumnType	4	getCatalogName	agent_platform	getColumnClassName	java.lang.Integer	getSchemaName		getColumnLabel	id	
+fieldStr: getScale	0	getPrecision	25	getColumnName	name	getColumnTypeName	VARCHAR	getColumnDisplaySize	25	isNullable	0	getTableName	agentglobalservicecfg	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	name	
+fieldStr: getScale	0	getPrecision	25	getColumnName	display_name	getColumnTypeName	VARCHAR	getColumnDisplaySize	25	isNullable	0	getTableName	agentglobalservicecfg	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	display_name	
+fieldStr: getScale	0	getPrecision	1	getColumnName	is_visible	getColumnTypeName	TINYINT	getColumnDisplaySize	1	isNullable	0	getTableName	agentglobalservicecfg	getColumnType	-7	getCatalogName	agent_platform	getColumnClassName	java.lang.Boolean	getSchemaName		getColumnLabel	is_visible	
+fieldStr: getScale	31	getPrecision	22	getColumnName	invoice_tax_ratio	getColumnTypeName	DOUBLE	getColumnDisplaySize	22	isNullable	0	getTableName	agentglobalservicecfg	getColumnType	8	getCatalogName	agent_platform	getColumnClassName	java.lang.Double	getSchemaName		getColumnLabel	invoice_tax_ratio	
+fieldStr: getScale	0	getPrecision	20	getColumnName	single_withdraw_fee_amount	getColumnTypeName	BIGINT UNSIGNED	getColumnDisplaySize	20	isNullable	0	getTableName	agentglobalservicecfg	getColumnType	-5	getCatalogName	agent_platform	getColumnClassName	java.math.BigInteger	getSchemaName		getColumnLabel	single_withdraw_fee_amount	
+fieldStr: getScale	0	getPrecision	100	getColumnName	description	getColumnTypeName	VARCHAR	getColumnDisplaySize	100	isNullable	0	getTableName	agentglobalservicecfg	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	description	
+fieldStr: getScale	0	getPrecision	20	getColumnName	extend	getColumnTypeName	VARCHAR	getColumnDisplaySize	20	isNullable	0	getTableName	agentglobalservicecfg	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	extend	
+fieldStr: getScale	0	getPrecision	19	getColumnName	created_at	getColumnTypeName	DATETIME	getColumnDisplaySize	19	isNullable	0	getTableName	agentglobalservicecfg	getColumnType	93	getCatalogName	agent_platform	getColumnClassName	java.sql.Timestamp	getSchemaName		getColumnLabel	created_at	
+fieldStr: getScale	0	getPrecision	19	getColumnName	updated_at	getColumnTypeName	DATETIME	getColumnDisplaySize	19	isNullable	0	getTableName	agentglobalservicecfg	getColumnType	93	getCatalogName	agent_platform	getColumnClassName	java.sql.Timestamp	getSchemaName		getColumnLabel	updated_at	
+fieldStr: getScale	0	getPrecision	11	getColumnName	id	getColumnTypeName	INT	getColumnDisplaySize	11	isNullable	0	getTableName	agentnew	getColumnType	4	getCatalogName	agent_platform	getColumnClassName	java.lang.Integer	getSchemaName		getColumnLabel	id	
+fieldStr: getScale	0	getPrecision	45	getColumnName	original_agent_no	getColumnTypeName	VARCHAR	getColumnDisplaySize	45	isNullable	0	getTableName	agentnew	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	original_agent_no	
+fieldStr: getScale	0	getPrecision	25	getColumnName	register_ip	getColumnTypeName	VARCHAR	getColumnDisplaySize	25	isNullable	0	getTableName	agentnew	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	register_ip	
+fieldStr: getScale	0	getPrecision	15	getColumnName	phone_no	getColumnTypeName	VARCHAR	getColumnDisplaySize	15	isNullable	0	getTableName	agentnew	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	phone_no	
+fieldStr: getScale	0	getPrecision	15	getColumnName	applicant	getColumnTypeName	VARCHAR	getColumnDisplaySize	15	isNullable	0	getTableName	agentnew	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	applicant	
+fieldStr: getScale	0	getPrecision	15	getColumnName	status	getColumnTypeName	VARCHAR	getColumnDisplaySize	15	isNullable	0	getTableName	agentnew	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	status	
+fieldStr: getScale	0	getPrecision	10	getColumnName	client_type	getColumnTypeName	VARCHAR	getColumnDisplaySize	10	isNullable	0	getTableName	agentnew	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	client_type	
+fieldStr: getScale	0	getPrecision	20	getColumnName	fullname	getColumnTypeName	VARCHAR	getColumnDisplaySize	20	isNullable	0	getTableName	agentnew	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	fullname	
+fieldStr: getScale	0	getPrecision	20	getColumnName	shortname	getColumnTypeName	VARCHAR	getColumnDisplaySize	20	isNullable	0	getTableName	agentnew	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	shortname	
+fieldStr: getScale	0	getPrecision	50	getColumnName	address	getColumnTypeName	VARCHAR	getColumnDisplaySize	50	isNullable	0	getTableName	agentnew	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	address	
+fieldStr: getScale	0	getPrecision	20	getColumnName	legal_person_name	getColumnTypeName	VARCHAR	getColumnDisplaySize	20	isNullable	0	getTableName	agentnew	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	legal_person_name	
+fieldStr: getScale	0	getPrecision	30	getColumnName	legal_person_id	getColumnTypeName	VARCHAR	getColumnDisplaySize	30	isNullable	0	getTableName	agentnew	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	legal_person_id	
+fieldStr: getScale	0	getPrecision	20	getColumnName	legal_person_id_img	getColumnTypeName	VARCHAR	getColumnDisplaySize	20	isNullable	0	getTableName	agentnew	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	legal_person_id_img	
+fieldStr: getScale	0	getPrecision	20	getColumnName	legal_person_id_back_img	getColumnTypeName	VARCHAR	getColumnDisplaySize	20	isNullable	0	getTableName	agentnew	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	legal_person_id_back_img	
+fieldStr: getScale	0	getPrecision	50	getColumnName	web_site	getColumnTypeName	VARCHAR	getColumnDisplaySize	50	isNullable	0	getTableName	agentnew	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	web_site	
+fieldStr: getScale	0	getPrecision	50	getColumnName	logo_img	getColumnTypeName	VARCHAR	getColumnDisplaySize	50	isNullable	0	getTableName	agentnew	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	logo_img	
+fieldStr: getScale	0	getPrecision	255	getColumnName	is3cards_in1	getColumnTypeName	VARCHAR	getColumnDisplaySize	255	isNullable	0	getTableName	agentnew	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	is3cards_in1	
+fieldStr: getScale	0	getPrecision	50	getColumnName	organization_code	getColumnTypeName	VARCHAR	getColumnDisplaySize	50	isNullable	0	getTableName	agentnew	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	organization_code	
+fieldStr: getScale	0	getPrecision	50	getColumnName	business_license_no	getColumnTypeName	VARCHAR	getColumnDisplaySize	50	isNullable	0	getTableName	agentnew	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	business_license_no	
+fieldStr: getScale	0	getPrecision	100	getColumnName	business_license_img	getColumnTypeName	VARCHAR	getColumnDisplaySize	100	isNullable	0	getTableName	agentnew	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	business_license_img	
+fieldStr: getScale	0	getPrecision	50	getColumnName	tax_register_no	getColumnTypeName	VARCHAR	getColumnDisplaySize	50	isNullable	0	getTableName	agentnew	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	tax_register_no	
+fieldStr: getScale	0	getPrecision	50	getColumnName	social_credit_code	getColumnTypeName	VARCHAR	getColumnDisplaySize	50	isNullable	0	getTableName	agentnew	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	social_credit_code	
+fieldStr: getScale	0	getPrecision	11	getColumnName	business_contacter_phone_no	getColumnTypeName	VARCHAR	getColumnDisplaySize	11	isNullable	0	getTableName	agentnew	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	business_contacter_phone_no	
+fieldStr: getScale	0	getPrecision	25	getColumnName	business_contacter_name	getColumnTypeName	VARCHAR	getColumnDisplaySize	25	isNullable	0	getTableName	agentnew	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	business_contacter_name	
+fieldStr: getScale	0	getPrecision	50	getColumnName	business_contacter_email	getColumnTypeName	VARCHAR	getColumnDisplaySize	50	isNullable	0	getTableName	agentnew	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	business_contacter_email	
+fieldStr: getScale	0	getPrecision	50	getColumnName	social_credit_code_img	getColumnTypeName	VARCHAR	getColumnDisplaySize	50	isNullable	0	getTableName	agentnew	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	social_credit_code_img	
+fieldStr: getScale	0	getPrecision	50	getColumnName	tax_register_no_img	getColumnTypeName	VARCHAR	getColumnDisplaySize	50	isNullable	0	getTableName	agentnew	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	tax_register_no_img	
+fieldStr: getScale	0	getPrecision	50	getColumnName	organization_code_img	getColumnTypeName	VARCHAR	getColumnDisplaySize	50	isNullable	0	getTableName	agentnew	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	organization_code_img	
+fieldStr: getScale	0	getPrecision	50	getColumnName	open_account_img	getColumnTypeName	VARCHAR	getColumnDisplaySize	50	isNullable	0	getTableName	agentnew	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	open_account_img	
+fieldStr: getScale	0	getPrecision	40	getColumnName	bis_scope	getColumnTypeName	VARCHAR	getColumnDisplaySize	40	isNullable	0	getTableName	agentnew	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	bis_scope	
+fieldStr: getScale	0	getPrecision	50	getColumnName	email	getColumnTypeName	VARCHAR	getColumnDisplaySize	50	isNullable	0	getTableName	agentnew	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	email	
+fieldStr: getScale	0	getPrecision	50	getColumnName	agent_role_id	getColumnTypeName	VARCHAR	getColumnDisplaySize	50	isNullable	0	getTableName	agentnew	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	agent_role_id	
+fieldStr: getScale	0	getPrecision	50	getColumnName	card_no	getColumnTypeName	VARCHAR	getColumnDisplaySize	50	isNullable	0	getTableName	agentnew	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	card_no	
+fieldStr: getScale	0	getPrecision	25	getColumnName	card_name	getColumnTypeName	VARCHAR	getColumnDisplaySize	25	isNullable	0	getTableName	agentnew	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	card_name	
+fieldStr: getScale	0	getPrecision	25	getColumnName	bank_name	getColumnTypeName	VARCHAR	getColumnDisplaySize	25	isNullable	0	getTableName	agentnew	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	bank_name	
+fieldStr: getScale	0	getPrecision	25	getColumnName	bank_branch_name	getColumnTypeName	VARCHAR	getColumnDisplaySize	25	isNullable	0	getTableName	agentnew	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	bank_branch_name	
+fieldStr: getScale	0	getPrecision	255	getColumnName	is_default	getColumnTypeName	VARCHAR	getColumnDisplaySize	255	isNullable	0	getTableName	agentnew	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	is_default	
+fieldStr: getScale	0	getPrecision	20	getColumnName	bail_amount	getColumnTypeName	BIGINT UNSIGNED	getColumnDisplaySize	20	isNullable	0	getTableName	agentnew	getColumnType	-5	getCatalogName	agent_platform	getColumnClassName	java.math.BigInteger	getSchemaName		getColumnLabel	bail_amount	
+fieldStr: getScale	0	getPrecision	15	getColumnName	clean_period_type	getColumnTypeName	VARCHAR	getColumnDisplaySize	15	isNullable	0	getTableName	agentnew	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	clean_period_type	
+fieldStr: getScale	0	getPrecision	15	getColumnName	settle_period_type	getColumnTypeName	VARCHAR	getColumnDisplaySize	15	isNullable	0	getTableName	agentnew	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	settle_period_type	
+fieldStr: getScale	0	getPrecision	19	getColumnName	expire_time	getColumnTypeName	DATETIME	getColumnDisplaySize	19	isNullable	0	getTableName	agentnew	getColumnType	93	getCatalogName	agent_platform	getColumnClassName	java.sql.Timestamp	getSchemaName		getColumnLabel	expire_time	
+fieldStr: getScale	0	getPrecision	19	getColumnName	effective_time	getColumnTypeName	DATETIME	getColumnDisplaySize	19	isNullable	0	getTableName	agentnew	getColumnType	93	getCatalogName	agent_platform	getColumnClassName	java.sql.Timestamp	getSchemaName		getColumnLabel	effective_time	
+fieldStr: getScale	0	getPrecision	19	getColumnName	create_time	getColumnTypeName	DATETIME	getColumnDisplaySize	19	isNullable	0	getTableName	agentnew	getColumnType	93	getCatalogName	agent_platform	getColumnClassName	java.sql.Timestamp	getSchemaName		getColumnLabel	create_time	
+fieldStr: getScale	0	getPrecision	19	getColumnName	register_time	getColumnTypeName	DATETIME	getColumnDisplaySize	19	isNullable	0	getTableName	agentnew	getColumnType	93	getCatalogName	agent_platform	getColumnClassName	java.sql.Timestamp	getSchemaName		getColumnLabel	register_time	
+fieldStr: getScale	0	getPrecision	19	getColumnName	check_time	getColumnTypeName	DATETIME	getColumnDisplaySize	19	isNullable	1	getTableName	agentnew	getColumnType	93	getCatalogName	agent_platform	getColumnClassName	java.sql.Timestamp	getSchemaName		getColumnLabel	check_time	
+fieldStr: getScale	0	getPrecision	15	getColumnName	checker_name	getColumnTypeName	VARCHAR	getColumnDisplaySize	15	isNullable	1	getTableName	agentnew	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	checker_name	
+fieldStr: getScale	0	getPrecision	50	getColumnName	check_remark	getColumnTypeName	VARCHAR	getColumnDisplaySize	50	isNullable	1	getTableName	agentnew	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	check_remark	
+fieldStr: getScale	0	getPrecision	45	getColumnName	agent_no	getColumnTypeName	VARCHAR	getColumnDisplaySize	45	isNullable	0	getTableName	agentnew	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	agent_no	
+fieldStr: getScale	0	getPrecision	50	getColumnName	account_no	getColumnTypeName	VARCHAR	getColumnDisplaySize	50	isNullable	0	getTableName	agentnew	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	account_no	
+fieldStr: getScale	0	getPrecision	19	getColumnName	created_at	getColumnTypeName	DATETIME	getColumnDisplaySize	19	isNullable	0	getTableName	agentnew	getColumnType	93	getCatalogName	agent_platform	getColumnClassName	java.sql.Timestamp	getSchemaName		getColumnLabel	created_at	
+fieldStr: getScale	0	getPrecision	19	getColumnName	updated_at	getColumnTypeName	DATETIME	getColumnDisplaySize	19	isNullable	0	getTableName	agentnew	getColumnType	93	getCatalogName	agent_platform	getColumnClassName	java.sql.Timestamp	getSchemaName		getColumnLabel	updated_at	
+fieldStr: getScale	0	getPrecision	11	getColumnName	id	getColumnTypeName	INT	getColumnDisplaySize	11	isNullable	0	getTableName	agentrole	getColumnType	4	getCatalogName	agent_platform	getColumnClassName	java.lang.Integer	getSchemaName		getColumnLabel	id	
+fieldStr: getScale	0	getPrecision	25	getColumnName	name	getColumnTypeName	VARCHAR	getColumnDisplaySize	25	isNullable	0	getTableName	agentrole	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	name	
+fieldStr: getScale	0	getPrecision	25	getColumnName	display_name	getColumnTypeName	VARCHAR	getColumnDisplaySize	25	isNullable	0	getTableName	agentrole	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	display_name	
+fieldStr: getScale	0	getPrecision	15	getColumnName	authority	getColumnTypeName	VARCHAR	getColumnDisplaySize	15	isNullable	0	getTableName	agentrole	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	authority	
+fieldStr: getScale	0	getPrecision	45	getColumnName	agent_no	getColumnTypeName	VARCHAR	getColumnDisplaySize	45	isNullable	0	getTableName	agentrole	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	agent_no	
+fieldStr: getScale	0	getPrecision	19	getColumnName	created_at	getColumnTypeName	DATETIME	getColumnDisplaySize	19	isNullable	0	getTableName	agentrole	getColumnType	93	getCatalogName	agent_platform	getColumnClassName	java.sql.Timestamp	getSchemaName		getColumnLabel	created_at	
+fieldStr: getScale	0	getPrecision	19	getColumnName	updated_at	getColumnTypeName	DATETIME	getColumnDisplaySize	19	isNullable	0	getTableName	agentrole	getColumnType	93	getCatalogName	agent_platform	getColumnClassName	java.sql.Timestamp	getSchemaName		getColumnLabel	updated_at	
+fieldStr: getScale	0	getPrecision	11	getColumnName	id	getColumnTypeName	INT	getColumnDisplaySize	11	isNullable	0	getTableName	bankcard	getColumnType	4	getCatalogName	agent_platform	getColumnClassName	java.lang.Integer	getSchemaName		getColumnLabel	id	
+fieldStr: getScale	0	getPrecision	1	getColumnName	is_default	getColumnTypeName	TINYINT	getColumnDisplaySize	1	isNullable	0	getTableName	bankcard	getColumnType	-7	getCatalogName	agent_platform	getColumnClassName	java.lang.Boolean	getSchemaName		getColumnLabel	is_default	
+fieldStr: getScale	0	getPrecision	45	getColumnName	agent_no	getColumnTypeName	VARCHAR	getColumnDisplaySize	45	isNullable	0	getTableName	bankcard	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	agent_no	
+fieldStr: getScale	0	getPrecision	50	getColumnName	card_no	getColumnTypeName	VARCHAR	getColumnDisplaySize	50	isNullable	0	getTableName	bankcard	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	card_no	
+fieldStr: getScale	0	getPrecision	25	getColumnName	card_name	getColumnTypeName	VARCHAR	getColumnDisplaySize	25	isNullable	0	getTableName	bankcard	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	card_name	
+fieldStr: getScale	0	getPrecision	25	getColumnName	bank_name	getColumnTypeName	VARCHAR	getColumnDisplaySize	25	isNullable	0	getTableName	bankcard	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	bank_name	
+fieldStr: getScale	0	getPrecision	25	getColumnName	bank_branch_name	getColumnTypeName	VARCHAR	getColumnDisplaySize	25	isNullable	0	getTableName	bankcard	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	bank_branch_name	
+fieldStr: getScale	0	getPrecision	19	getColumnName	created_at	getColumnTypeName	DATETIME	getColumnDisplaySize	19	isNullable	0	getTableName	bankcard	getColumnType	93	getCatalogName	agent_platform	getColumnClassName	java.sql.Timestamp	getSchemaName		getColumnLabel	created_at	
+fieldStr: getScale	0	getPrecision	19	getColumnName	updated_at	getColumnTypeName	DATETIME	getColumnDisplaySize	19	isNullable	0	getTableName	bankcard	getColumnType	93	getCatalogName	agent_platform	getColumnClassName	java.sql.Timestamp	getSchemaName		getColumnLabel	updated_at	
+fieldStr: getScale	0	getPrecision	11	getColumnName	id	getColumnTypeName	INT	getColumnDisplaySize	11	isNullable	0	getTableName	company	getColumnType	4	getCatalogName	agent_platform	getColumnClassName	java.lang.Integer	getSchemaName		getColumnLabel	id	
+fieldStr: getScale	0	getPrecision	10	getColumnName	client_type	getColumnTypeName	VARCHAR	getColumnDisplaySize	10	isNullable	0	getTableName	company	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	client_type	
+fieldStr: getScale	0	getPrecision	20	getColumnName	fullname	getColumnTypeName	VARCHAR	getColumnDisplaySize	20	isNullable	0	getTableName	company	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	fullname	
+fieldStr: getScale	0	getPrecision	20	getColumnName	shortname	getColumnTypeName	VARCHAR	getColumnDisplaySize	20	isNullable	0	getTableName	company	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	shortname	
+fieldStr: getScale	0	getPrecision	50	getColumnName	address	getColumnTypeName	VARCHAR	getColumnDisplaySize	50	isNullable	0	getTableName	company	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	address	
+fieldStr: getScale	0	getPrecision	20	getColumnName	legal_person_name	getColumnTypeName	VARCHAR	getColumnDisplaySize	20	isNullable	0	getTableName	company	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	legal_person_name	
+fieldStr: getScale	0	getPrecision	30	getColumnName	legal_person_id	getColumnTypeName	VARCHAR	getColumnDisplaySize	30	isNullable	0	getTableName	company	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	legal_person_id	
+fieldStr: getScale	0	getPrecision	20	getColumnName	legal_person_id_img	getColumnTypeName	VARCHAR	getColumnDisplaySize	20	isNullable	0	getTableName	company	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	legal_person_id_img	
+fieldStr: getScale	0	getPrecision	20	getColumnName	legal_person_id_back_img	getColumnTypeName	VARCHAR	getColumnDisplaySize	20	isNullable	0	getTableName	company	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	legal_person_id_back_img	
+fieldStr: getScale	0	getPrecision	50	getColumnName	web_site	getColumnTypeName	VARCHAR	getColumnDisplaySize	50	isNullable	0	getTableName	company	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	web_site	
+fieldStr: getScale	0	getPrecision	50	getColumnName	logo_img	getColumnTypeName	VARCHAR	getColumnDisplaySize	50	isNullable	0	getTableName	company	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	logo_img	
+fieldStr: getScale	0	getPrecision	255	getColumnName	is3cards_in1	getColumnTypeName	VARCHAR	getColumnDisplaySize	255	isNullable	0	getTableName	company	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	is3cards_in1	
+fieldStr: getScale	0	getPrecision	50	getColumnName	organization_code	getColumnTypeName	VARCHAR	getColumnDisplaySize	50	isNullable	0	getTableName	company	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	organization_code	
+fieldStr: getScale	0	getPrecision	50	getColumnName	business_license_no	getColumnTypeName	VARCHAR	getColumnDisplaySize	50	isNullable	0	getTableName	company	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	business_license_no	
+fieldStr: getScale	0	getPrecision	100	getColumnName	business_license_img	getColumnTypeName	VARCHAR	getColumnDisplaySize	100	isNullable	0	getTableName	company	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	business_license_img	
+fieldStr: getScale	0	getPrecision	50	getColumnName	tax_register_no	getColumnTypeName	VARCHAR	getColumnDisplaySize	50	isNullable	0	getTableName	company	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	tax_register_no	
+fieldStr: getScale	0	getPrecision	50	getColumnName	social_credit_code	getColumnTypeName	VARCHAR	getColumnDisplaySize	50	isNullable	0	getTableName	company	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	social_credit_code	
+fieldStr: getScale	0	getPrecision	11	getColumnName	business_contacter_phone_no	getColumnTypeName	VARCHAR	getColumnDisplaySize	11	isNullable	0	getTableName	company	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	business_contacter_phone_no	
+fieldStr: getScale	0	getPrecision	25	getColumnName	business_contacter_name	getColumnTypeName	VARCHAR	getColumnDisplaySize	25	isNullable	0	getTableName	company	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	business_contacter_name	
+fieldStr: getScale	0	getPrecision	50	getColumnName	business_contacter_email	getColumnTypeName	VARCHAR	getColumnDisplaySize	50	isNullable	0	getTableName	company	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	business_contacter_email	
+fieldStr: getScale	0	getPrecision	50	getColumnName	social_credit_code_img	getColumnTypeName	VARCHAR	getColumnDisplaySize	50	isNullable	0	getTableName	company	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	social_credit_code_img	
+fieldStr: getScale	0	getPrecision	50	getColumnName	tax_register_no_img	getColumnTypeName	VARCHAR	getColumnDisplaySize	50	isNullable	0	getTableName	company	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	tax_register_no_img	
+fieldStr: getScale	0	getPrecision	50	getColumnName	organization_code_img	getColumnTypeName	VARCHAR	getColumnDisplaySize	50	isNullable	0	getTableName	company	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	organization_code_img	
+fieldStr: getScale	0	getPrecision	50	getColumnName	open_account_img	getColumnTypeName	VARCHAR	getColumnDisplaySize	50	isNullable	0	getTableName	company	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	open_account_img	
+fieldStr: getScale	0	getPrecision	255	getColumnName	bis_scope	getColumnTypeName	VARCHAR	getColumnDisplaySize	255	isNullable	0	getTableName	company	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	bis_scope	
+fieldStr: getScale	0	getPrecision	45	getColumnName	agent_no	getColumnTypeName	VARCHAR	getColumnDisplaySize	45	isNullable	0	getTableName	company	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	agent_no	
+fieldStr: getScale	0	getPrecision	19	getColumnName	created_at	getColumnTypeName	DATETIME	getColumnDisplaySize	19	isNullable	0	getTableName	company	getColumnType	93	getCatalogName	agent_platform	getColumnClassName	java.sql.Timestamp	getSchemaName		getColumnLabel	created_at	
+fieldStr: getScale	0	getPrecision	19	getColumnName	updated_at	getColumnTypeName	DATETIME	getColumnDisplaySize	19	isNullable	0	getTableName	company	getColumnType	93	getCatalogName	agent_platform	getColumnClassName	java.sql.Timestamp	getSchemaName		getColumnLabel	updated_at	
+fieldStr: getScale	0	getPrecision	11	getColumnName	id	getColumnTypeName	INT	getColumnDisplaySize	11	isNullable	0	getTableName	liquidation	getColumnType	4	getCatalogName	agent_platform	getColumnClassName	java.lang.Integer	getSchemaName		getColumnLabel	id	
+fieldStr: getScale	0	getPrecision	50	getColumnName	liquidate_serial_no	getColumnTypeName	VARCHAR	getColumnDisplaySize	50	isNullable	0	getTableName	liquidation	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	liquidate_serial_no	
+fieldStr: getScale	0	getPrecision	50	getColumnName	parent_liquidate_serial_no	getColumnTypeName	VARCHAR	getColumnDisplaySize	50	isNullable	0	getTableName	liquidation	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	parent_liquidate_serial_no	
+fieldStr: getScale	0	getPrecision	50	getColumnName	settle_serial_no	getColumnTypeName	VARCHAR	getColumnDisplaySize	50	isNullable	0	getTableName	liquidation	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	settle_serial_no	
+fieldStr: getScale	0	getPrecision	50	getColumnName	settle_detail_serial_no	getColumnTypeName	VARCHAR	getColumnDisplaySize	50	isNullable	0	getTableName	liquidation	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	settle_detail_serial_no	
+fieldStr: getScale	0	getPrecision	19	getColumnName	trade_time	getColumnTypeName	DATETIME	getColumnDisplaySize	19	isNullable	0	getTableName	liquidation	getColumnType	93	getCatalogName	agent_platform	getColumnClassName	java.sql.Timestamp	getSchemaName		getColumnLabel	trade_time	
+fieldStr: getScale	0	getPrecision	11	getColumnName	total_count	getColumnTypeName	INT	getColumnDisplaySize	11	isNullable	0	getTableName	liquidation	getColumnType	4	getCatalogName	agent_platform	getColumnClassName	java.lang.Integer	getSchemaName		getColumnLabel	total_count	
+fieldStr: getScale	0	getPrecision	20	getColumnName	total_amount	getColumnTypeName	BIGINT UNSIGNED	getColumnDisplaySize	20	isNullable	0	getTableName	liquidation	getColumnType	-5	getCatalogName	agent_platform	getColumnClassName	java.math.BigInteger	getSchemaName		getColumnLabel	total_amount	
+fieldStr: getScale	0	getPrecision	19	getColumnName	start_time	getColumnTypeName	DATETIME	getColumnDisplaySize	19	isNullable	1	getTableName	liquidation	getColumnType	93	getCatalogName	agent_platform	getColumnClassName	java.sql.Timestamp	getSchemaName		getColumnLabel	start_time	
+fieldStr: getScale	0	getPrecision	19	getColumnName	end_time	getColumnTypeName	DATETIME	getColumnDisplaySize	19	isNullable	1	getTableName	liquidation	getColumnType	93	getCatalogName	agent_platform	getColumnClassName	java.sql.Timestamp	getSchemaName		getColumnLabel	end_time	
+fieldStr: getScale	0	getPrecision	1	getColumnName	status	getColumnTypeName	TINYINT	getColumnDisplaySize	1	isNullable	0	getTableName	liquidation	getColumnType	-7	getCatalogName	agent_platform	getColumnClassName	java.lang.Boolean	getSchemaName		getColumnLabel	status	
+fieldStr: getScale	0	getPrecision	50	getColumnName	reason	getColumnTypeName	VARCHAR	getColumnDisplaySize	50	isNullable	0	getTableName	liquidation	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	reason	
+fieldStr: getScale	0	getPrecision	45	getColumnName	agent_no	getColumnTypeName	VARCHAR	getColumnDisplaySize	45	isNullable	0	getTableName	liquidation	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	agent_no	
+fieldStr: getScale	0	getPrecision	10	getColumnName	trade_type	getColumnTypeName	VARCHAR	getColumnDisplaySize	10	isNullable	0	getTableName	liquidation	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	trade_type	
+fieldStr: getScale	0	getPrecision	15	getColumnName	trade_way	getColumnTypeName	VARCHAR	getColumnDisplaySize	15	isNullable	0	getTableName	liquidation	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	trade_way	
+fieldStr: getScale	31	getPrecision	22	getColumnName	merchant_fee_ratio	getColumnTypeName	DOUBLE	getColumnDisplaySize	22	isNullable	0	getTableName	liquidation	getColumnType	8	getCatalogName	agent_platform	getColumnClassName	java.lang.Double	getSchemaName		getColumnLabel	merchant_fee_ratio	
+fieldStr: getScale	31	getPrecision	22	getColumnName	agent_fee_ratio	getColumnTypeName	DOUBLE	getColumnDisplaySize	22	isNullable	0	getTableName	liquidation	getColumnType	8	getCatalogName	agent_platform	getColumnClassName	java.lang.Double	getSchemaName		getColumnLabel	agent_fee_ratio	
+fieldStr: getScale	0	getPrecision	45	getColumnName	merchant_no	getColumnTypeName	VARCHAR	getColumnDisplaySize	45	isNullable	0	getTableName	liquidation	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	merchant_no	
+fieldStr: getScale	0	getPrecision	20	getColumnName	merchant_name	getColumnTypeName	VARCHAR	getColumnDisplaySize	20	isNullable	0	getTableName	liquidation	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	merchant_name	
+fieldStr: getScale	0	getPrecision	50	getColumnName	agent_username	getColumnTypeName	VARCHAR	getColumnDisplaySize	50	isNullable	0	getTableName	liquidation	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	agent_username	
+fieldStr: getScale	0	getPrecision	19	getColumnName	created_at	getColumnTypeName	DATETIME	getColumnDisplaySize	19	isNullable	0	getTableName	liquidation	getColumnType	93	getCatalogName	agent_platform	getColumnClassName	java.sql.Timestamp	getSchemaName		getColumnLabel	created_at	
+fieldStr: getScale	0	getPrecision	19	getColumnName	updated_at	getColumnTypeName	DATETIME	getColumnDisplaySize	19	isNullable	0	getTableName	liquidation	getColumnType	93	getCatalogName	agent_platform	getColumnClassName	java.sql.Timestamp	getSchemaName		getColumnLabel	updated_at	
+fieldStr: getScale	0	getPrecision	15	getColumnName	type	getColumnTypeName	VARCHAR	getColumnDisplaySize	15	isNullable	1	getTableName	liquidation	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	type	
+fieldStr: getScale	0	getPrecision	20	getColumnName	fee_split_amount	getColumnTypeName	BIGINT UNSIGNED	getColumnDisplaySize	20	isNullable	1	getTableName	liquidation	getColumnType	-5	getCatalogName	agent_platform	getColumnClassName	java.math.BigInteger	getSchemaName		getColumnLabel	fee_split_amount	
+fieldStr: getScale	0	getPrecision	11	getColumnName	id	getColumnTypeName	INT	getColumnDisplaySize	11	isNullable	0	getTableName	merchant	getColumnType	4	getCatalogName	agent_platform	getColumnClassName	java.lang.Integer	getSchemaName		getColumnLabel	id	
+fieldStr: getScale	0	getPrecision	50	getColumnName	name	getColumnTypeName	VARCHAR	getColumnDisplaySize	50	isNullable	1	getTableName	merchant	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	name	
+fieldStr: getScale	0	getPrecision	15	getColumnName	phone_no	getColumnTypeName	VARCHAR	getColumnDisplaySize	15	isNullable	0	getTableName	merchant	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	phone_no	
+fieldStr: getScale	0	getPrecision	19	getColumnName	register_time	getColumnTypeName	DATETIME	getColumnDisplaySize	19	isNullable	0	getTableName	merchant	getColumnType	93	getCatalogName	agent_platform	getColumnClassName	java.sql.Timestamp	getSchemaName		getColumnLabel	register_time	
+fieldStr: getScale	0	getPrecision	255	getColumnName	register_ip	getColumnTypeName	VARCHAR	getColumnDisplaySize	255	isNullable	0	getTableName	merchant	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	register_ip	
+fieldStr: getScale	0	getPrecision	20	getColumnName	industry_type	getColumnTypeName	VARCHAR	getColumnDisplaySize	20	isNullable	0	getTableName	merchant	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	industry_type	
+fieldStr: getScale	0	getPrecision	15	getColumnName	applicant	getColumnTypeName	VARCHAR	getColumnDisplaySize	15	isNullable	0	getTableName	merchant	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	applicant	
+fieldStr: getScale	0	getPrecision	19	getColumnName	check_time	getColumnTypeName	DATETIME	getColumnDisplaySize	19	isNullable	1	getTableName	merchant	getColumnType	93	getCatalogName	agent_platform	getColumnClassName	java.sql.Timestamp	getSchemaName		getColumnLabel	check_time	
+fieldStr: getScale	0	getPrecision	15	getColumnName	checker_name	getColumnTypeName	VARCHAR	getColumnDisplaySize	15	isNullable	1	getTableName	merchant	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	checker_name	
+fieldStr: getScale	0	getPrecision	50	getColumnName	check_remark	getColumnTypeName	VARCHAR	getColumnDisplaySize	50	isNullable	1	getTableName	merchant	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	check_remark	
+fieldStr: getScale	0	getPrecision	15	getColumnName	status	getColumnTypeName	VARCHAR	getColumnDisplaySize	15	isNullable	0	getTableName	merchant	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	status	
+fieldStr: getScale	0	getPrecision	50	getColumnName	email	getColumnTypeName	VARCHAR	getColumnDisplaySize	50	isNullable	0	getTableName	merchant	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	email	
+fieldStr: getScale	0	getPrecision	45	getColumnName	agent_no	getColumnTypeName	VARCHAR	getColumnDisplaySize	45	isNullable	0	getTableName	merchant	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	agent_no	
+fieldStr: getScale	0	getPrecision	45	getColumnName	merchant_no	getColumnTypeName	VARCHAR	getColumnDisplaySize	45	isNullable	0	getTableName	merchant	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	merchant_no	
+fieldStr: getScale	0	getPrecision	19	getColumnName	created_at	getColumnTypeName	DATETIME	getColumnDisplaySize	19	isNullable	0	getTableName	merchant	getColumnType	93	getCatalogName	agent_platform	getColumnClassName	java.sql.Timestamp	getSchemaName		getColumnLabel	created_at	
+fieldStr: getScale	0	getPrecision	19	getColumnName	updated_at	getColumnTypeName	DATETIME	getColumnDisplaySize	19	isNullable	0	getTableName	merchant	getColumnType	93	getCatalogName	agent_platform	getColumnClassName	java.sql.Timestamp	getSchemaName		getColumnLabel	updated_at	
+fieldStr: getScale	0	getPrecision	11	getColumnName	id	getColumnTypeName	INT	getColumnDisplaySize	11	isNullable	0	getTableName	operatelog	getColumnType	4	getCatalogName	agent_platform	getColumnClassName	java.lang.Integer	getSchemaName		getColumnLabel	id	
+fieldStr: getScale	0	getPrecision	25	getColumnName	operator_name	getColumnTypeName	VARCHAR	getColumnDisplaySize	25	isNullable	0	getTableName	operatelog	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	operator_name	
+fieldStr: getScale	0	getPrecision	25	getColumnName	action_name	getColumnTypeName	VARCHAR	getColumnDisplaySize	25	isNullable	0	getTableName	operatelog	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	action_name	
+fieldStr: getScale	0	getPrecision	20	getColumnName	clinet_ip	getColumnTypeName	VARCHAR	getColumnDisplaySize	20	isNullable	0	getTableName	operatelog	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	clinet_ip	
+fieldStr: getScale	0	getPrecision	50	getColumnName	client_device_info	getColumnTypeName	VARCHAR	getColumnDisplaySize	50	isNullable	0	getTableName	operatelog	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	client_device_info	
+fieldStr: getScale	0	getPrecision	100	getColumnName	remark	getColumnTypeName	VARCHAR	getColumnDisplaySize	100	isNullable	0	getTableName	operatelog	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	remark	
+fieldStr: getScale	0	getPrecision	45	getColumnName	agent_no	getColumnTypeName	VARCHAR	getColumnDisplaySize	45	isNullable	0	getTableName	operatelog	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	agent_no	
+fieldStr: getScale	0	getPrecision	19	getColumnName	created_at	getColumnTypeName	DATETIME	getColumnDisplaySize	19	isNullable	0	getTableName	operatelog	getColumnType	93	getCatalogName	agent_platform	getColumnClassName	java.sql.Timestamp	getSchemaName		getColumnLabel	created_at	
+fieldStr: getScale	0	getPrecision	19	getColumnName	updated_at	getColumnTypeName	DATETIME	getColumnDisplaySize	19	isNullable	0	getTableName	operatelog	getColumnType	93	getCatalogName	agent_platform	getColumnClassName	java.sql.Timestamp	getSchemaName		getColumnLabel	updated_at	
+fieldStr: getScale	0	getPrecision	11	getColumnName	id	getColumnTypeName	INT	getColumnDisplaySize	11	isNullable	0	getTableName	productcontract	getColumnType	4	getCatalogName	agent_platform	getColumnClassName	java.lang.Integer	getSchemaName		getColumnLabel	id	
+fieldStr: getScale	0	getPrecision	50	getColumnName	contract_no	getColumnTypeName	VARCHAR	getColumnDisplaySize	50	isNullable	0	getTableName	productcontract	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	contract_no	
+fieldStr: getScale	0	getPrecision	20	getColumnName	bail_amount	getColumnTypeName	BIGINT UNSIGNED	getColumnDisplaySize	20	isNullable	0	getTableName	productcontract	getColumnType	-5	getCatalogName	agent_platform	getColumnClassName	java.math.BigInteger	getSchemaName		getColumnLabel	bail_amount	
+fieldStr: getScale	0	getPrecision	15	getColumnName	clean_period_type	getColumnTypeName	VARCHAR	getColumnDisplaySize	15	isNullable	0	getTableName	productcontract	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	clean_period_type	
+fieldStr: getScale	0	getPrecision	15	getColumnName	settle_period_type	getColumnTypeName	VARCHAR	getColumnDisplaySize	15	isNullable	0	getTableName	productcontract	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	settle_period_type	
+fieldStr: getScale	0	getPrecision	19	getColumnName	expire_time	getColumnTypeName	DATETIME	getColumnDisplaySize	19	isNullable	0	getTableName	productcontract	getColumnType	93	getCatalogName	agent_platform	getColumnClassName	java.sql.Timestamp	getSchemaName		getColumnLabel	expire_time	
+fieldStr: getScale	0	getPrecision	19	getColumnName	effective_time	getColumnTypeName	DATETIME	getColumnDisplaySize	19	isNullable	0	getTableName	productcontract	getColumnType	93	getCatalogName	agent_platform	getColumnClassName	java.sql.Timestamp	getSchemaName		getColumnLabel	effective_time	
+fieldStr: getScale	0	getPrecision	45	getColumnName	agent_no	getColumnTypeName	VARCHAR	getColumnDisplaySize	45	isNullable	0	getTableName	productcontract	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	agent_no	
+fieldStr: getScale	0	getPrecision	19	getColumnName	created_at	getColumnTypeName	DATETIME	getColumnDisplaySize	19	isNullable	0	getTableName	productcontract	getColumnType	93	getCatalogName	agent_platform	getColumnClassName	java.sql.Timestamp	getSchemaName		getColumnLabel	created_at	
+fieldStr: getScale	0	getPrecision	19	getColumnName	updated_at	getColumnTypeName	DATETIME	getColumnDisplaySize	19	isNullable	0	getTableName	productcontract	getColumnType	93	getCatalogName	agent_platform	getColumnClassName	java.sql.Timestamp	getSchemaName		getColumnLabel	updated_at	
+fieldStr: getScale	0	getPrecision	11	getColumnName	id	getColumnTypeName	INT	getColumnDisplaySize	11	isNullable	0	getTableName	productfeerule	getColumnType	4	getCatalogName	agent_platform	getColumnClassName	java.lang.Integer	getSchemaName		getColumnLabel	id	
+fieldStr: getScale	0	getPrecision	20	getColumnName	industry_type	getColumnTypeName	VARCHAR	getColumnDisplaySize	20	isNullable	0	getTableName	productfeerule	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	industry_type	
+fieldStr: getScale	0	getPrecision	50	getColumnName	calculate_type	getColumnTypeName	VARCHAR	getColumnDisplaySize	50	isNullable	0	getTableName	productfeerule	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	calculate_type	
+fieldStr: getScale	31	getPrecision	22	getColumnName	fee_rate	getColumnTypeName	DOUBLE	getColumnDisplaySize	22	isNullable	0	getTableName	productfeerule	getColumnType	8	getCatalogName	agent_platform	getColumnClassName	java.lang.Double	getSchemaName		getColumnLabel	fee_rate	
+fieldStr: getScale	0	getPrecision	45	getColumnName	agent_no	getColumnTypeName	VARCHAR	getColumnDisplaySize	45	isNullable	0	getTableName	productfeerule	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	agent_no	
+fieldStr: getScale	0	getPrecision	10	getColumnName	trade_type	getColumnTypeName	VARCHAR	getColumnDisplaySize	10	isNullable	0	getTableName	productfeerule	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	trade_type	
+fieldStr: getScale	0	getPrecision	15	getColumnName	trade_way	getColumnTypeName	VARCHAR	getColumnDisplaySize	15	isNullable	0	getTableName	productfeerule	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	trade_way	
+fieldStr: getScale	0	getPrecision	19	getColumnName	created_at	getColumnTypeName	DATETIME	getColumnDisplaySize	19	isNullable	0	getTableName	productfeerule	getColumnType	93	getCatalogName	agent_platform	getColumnClassName	java.sql.Timestamp	getSchemaName		getColumnLabel	created_at	
+fieldStr: getScale	0	getPrecision	19	getColumnName	updated_at	getColumnTypeName	DATETIME	getColumnDisplaySize	19	isNullable	0	getTableName	productfeerule	getColumnType	93	getCatalogName	agent_platform	getColumnClassName	java.sql.Timestamp	getSchemaName		getColumnLabel	updated_at	
+fieldStr: getScale	0	getPrecision	11	getColumnName	id	getColumnTypeName	INT	getColumnDisplaySize	11	isNullable	0	getTableName	servicecaptchacode	getColumnType	4	getCatalogName	agent_platform	getColumnClassName	java.lang.Integer	getSchemaName		getColumnLabel	id	
+fieldStr: getScale	0	getPrecision	20	getColumnName	user_id	getColumnTypeName	VARCHAR	getColumnDisplaySize	20	isNullable	0	getTableName	servicecaptchacode	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	user_id	
+fieldStr: getScale	0	getPrecision	1	getColumnName	send_type	getColumnTypeName	TINYINT	getColumnDisplaySize	1	isNullable	0	getTableName	servicecaptchacode	getColumnType	-7	getCatalogName	agent_platform	getColumnClassName	java.lang.Boolean	getSchemaName		getColumnLabel	send_type	
+fieldStr: getScale	0	getPrecision	1	getColumnName	status	getColumnTypeName	TINYINT	getColumnDisplaySize	1	isNullable	0	getTableName	servicecaptchacode	getColumnType	-7	getCatalogName	agent_platform	getColumnClassName	java.lang.Boolean	getSchemaName		getColumnLabel	status	
+fieldStr: getScale	0	getPrecision	19	getColumnName	expire_time	getColumnTypeName	DATETIME	getColumnDisplaySize	19	isNullable	0	getTableName	servicecaptchacode	getColumnType	93	getCatalogName	agent_platform	getColumnClassName	java.sql.Timestamp	getSchemaName		getColumnLabel	expire_time	
+fieldStr: getScale	0	getPrecision	25	getColumnName	ip	getColumnTypeName	VARCHAR	getColumnDisplaySize	25	isNullable	0	getTableName	servicecaptchacode	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	ip	
+fieldStr: getScale	0	getPrecision	30	getColumnName	code	getColumnTypeName	VARCHAR	getColumnDisplaySize	30	isNullable	0	getTableName	servicecaptchacode	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	code	
+fieldStr: getScale	0	getPrecision	45	getColumnName	agent_no	getColumnTypeName	VARCHAR	getColumnDisplaySize	45	isNullable	0	getTableName	servicecaptchacode	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	agent_no	
+fieldStr: getScale	0	getPrecision	19	getColumnName	created_at	getColumnTypeName	DATETIME	getColumnDisplaySize	19	isNullable	0	getTableName	servicecaptchacode	getColumnType	93	getCatalogName	agent_platform	getColumnClassName	java.sql.Timestamp	getSchemaName		getColumnLabel	created_at	
+fieldStr: getScale	0	getPrecision	19	getColumnName	updated_at	getColumnTypeName	DATETIME	getColumnDisplaySize	19	isNullable	0	getTableName	servicecaptchacode	getColumnType	93	getCatalogName	agent_platform	getColumnClassName	java.sql.Timestamp	getSchemaName		getColumnLabel	updated_at	
+fieldStr: getScale	0	getPrecision	11	getColumnName	id	getColumnTypeName	INT	getColumnDisplaySize	11	isNullable	0	getTableName	settle	getColumnType	4	getCatalogName	agent_platform	getColumnClassName	java.lang.Integer	getSchemaName		getColumnLabel	id	
+fieldStr: getScale	0	getPrecision	50	getColumnName	parent_settle_serial_no	getColumnTypeName	VARCHAR	getColumnDisplaySize	50	isNullable	0	getTableName	settle	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	parent_settle_serial_no	
+fieldStr: getScale	0	getPrecision	50	getColumnName	settle_serial_no	getColumnTypeName	VARCHAR	getColumnDisplaySize	50	isNullable	0	getTableName	settle	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	settle_serial_no	
+fieldStr: getScale	0	getPrecision	19	getColumnName	trade_time	getColumnTypeName	DATETIME	getColumnDisplaySize	19	isNullable	1	getTableName	settle	getColumnType	93	getCatalogName	agent_platform	getColumnClassName	java.sql.Timestamp	getSchemaName		getColumnLabel	trade_time	
+fieldStr: getScale	0	getPrecision	11	getColumnName	total_count	getColumnTypeName	INT	getColumnDisplaySize	11	isNullable	0	getTableName	settle	getColumnType	4	getCatalogName	agent_platform	getColumnClassName	java.lang.Integer	getSchemaName		getColumnLabel	total_count	
+fieldStr: getScale	0	getPrecision	20	getColumnName	total_amount	getColumnTypeName	BIGINT UNSIGNED	getColumnDisplaySize	20	isNullable	0	getTableName	settle	getColumnType	-5	getCatalogName	agent_platform	getColumnClassName	java.math.BigInteger	getSchemaName		getColumnLabel	total_amount	
+fieldStr: getScale	0	getPrecision	20	getColumnName	fee_split_amount	getColumnTypeName	BIGINT UNSIGNED	getColumnDisplaySize	20	isNullable	0	getTableName	settle	getColumnType	-5	getCatalogName	agent_platform	getColumnClassName	java.math.BigInteger	getSchemaName		getColumnLabel	fee_split_amount	
+fieldStr: getScale	0	getPrecision	19	getColumnName	start_time	getColumnTypeName	DATETIME	getColumnDisplaySize	19	isNullable	1	getTableName	settle	getColumnType	93	getCatalogName	agent_platform	getColumnClassName	java.sql.Timestamp	getSchemaName		getColumnLabel	start_time	
+fieldStr: getScale	0	getPrecision	19	getColumnName	end_time	getColumnTypeName	DATETIME	getColumnDisplaySize	19	isNullable	1	getTableName	settle	getColumnType	93	getCatalogName	agent_platform	getColumnClassName	java.sql.Timestamp	getSchemaName		getColumnLabel	end_time	
+fieldStr: getScale	0	getPrecision	1	getColumnName	status	getColumnTypeName	TINYINT	getColumnDisplaySize	1	isNullable	0	getTableName	settle	getColumnType	-7	getCatalogName	agent_platform	getColumnClassName	java.lang.Boolean	getSchemaName		getColumnLabel	status	
+fieldStr: getScale	0	getPrecision	50	getColumnName	reason	getColumnTypeName	VARCHAR	getColumnDisplaySize	50	isNullable	0	getTableName	settle	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	reason	
+fieldStr: getScale	0	getPrecision	45	getColumnName	agent_no	getColumnTypeName	VARCHAR	getColumnDisplaySize	45	isNullable	0	getTableName	settle	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	agent_no	
+fieldStr: getScale	0	getPrecision	10	getColumnName	trade_type	getColumnTypeName	VARCHAR	getColumnDisplaySize	10	isNullable	0	getTableName	settle	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	trade_type	
+fieldStr: getScale	0	getPrecision	15	getColumnName	trade_way	getColumnTypeName	VARCHAR	getColumnDisplaySize	15	isNullable	0	getTableName	settle	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	trade_way	
+fieldStr: getScale	0	getPrecision	45	getColumnName	merchant_no	getColumnTypeName	VARCHAR	getColumnDisplaySize	45	isNullable	0	getTableName	settle	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	merchant_no	
+fieldStr: getScale	0	getPrecision	20	getColumnName	merchant_name	getColumnTypeName	VARCHAR	getColumnDisplaySize	20	isNullable	0	getTableName	settle	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	merchant_name	
+fieldStr: getScale	0	getPrecision	50	getColumnName	agent_username	getColumnTypeName	VARCHAR	getColumnDisplaySize	50	isNullable	0	getTableName	settle	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	agent_username	
+fieldStr: getScale	0	getPrecision	19	getColumnName	created_at	getColumnTypeName	DATETIME	getColumnDisplaySize	19	isNullable	0	getTableName	settle	getColumnType	93	getCatalogName	agent_platform	getColumnClassName	java.sql.Timestamp	getSchemaName		getColumnLabel	created_at	
+fieldStr: getScale	0	getPrecision	19	getColumnName	updated_at	getColumnTypeName	DATETIME	getColumnDisplaySize	19	isNullable	0	getTableName	settle	getColumnType	93	getCatalogName	agent_platform	getColumnClassName	java.sql.Timestamp	getSchemaName		getColumnLabel	updated_at	
+fieldStr: getScale	0	getPrecision	15	getColumnName	type	getColumnTypeName	VARCHAR	getColumnDisplaySize	15	isNullable	1	getTableName	settle	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	type	
+fieldStr: getScale	0	getPrecision	11	getColumnName	id	getColumnTypeName	INT	getColumnDisplaySize	11	isNullable	0	getTableName	trade	getColumnType	4	getCatalogName	agent_platform	getColumnClassName	java.lang.Integer	getSchemaName		getColumnLabel	id	
+fieldStr: getScale	0	getPrecision	50	getColumnName	merchant_name	getColumnTypeName	VARCHAR	getColumnDisplaySize	50	isNullable	0	getTableName	trade	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	merchant_name	
+fieldStr: getScale	0	getPrecision	45	getColumnName	order_no	getColumnTypeName	VARCHAR	getColumnDisplaySize	45	isNullable	0	getTableName	trade	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	order_no	
+fieldStr: getScale	0	getPrecision	45	getColumnName	order_detail_no	getColumnTypeName	VARCHAR	getColumnDisplaySize	45	isNullable	0	getTableName	trade	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	order_detail_no	
+fieldStr: getScale	0	getPrecision	20	getColumnName	amount	getColumnTypeName	BIGINT UNSIGNED	getColumnDisplaySize	20	isNullable	0	getTableName	trade	getColumnType	-5	getCatalogName	agent_platform	getColumnClassName	java.math.BigInteger	getSchemaName		getColumnLabel	amount	
+fieldStr: getScale	0	getPrecision	20	getColumnName	fee_amount	getColumnTypeName	BIGINT UNSIGNED	getColumnDisplaySize	20	isNullable	0	getTableName	trade	getColumnType	-5	getCatalogName	agent_platform	getColumnClassName	java.math.BigInteger	getSchemaName		getColumnLabel	fee_amount	
+fieldStr: getScale	0	getPrecision	19	getColumnName	trade_time	getColumnTypeName	DATETIME	getColumnDisplaySize	19	isNullable	1	getTableName	trade	getColumnType	93	getCatalogName	agent_platform	getColumnClassName	java.sql.Timestamp	getSchemaName		getColumnLabel	trade_time	
+fieldStr: getScale	0	getPrecision	45	getColumnName	liquidate_serial_no	getColumnTypeName	VARCHAR	getColumnDisplaySize	45	isNullable	0	getTableName	trade	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	liquidate_serial_no	
+fieldStr: getScale	0	getPrecision	45	getColumnName	liquidate_detail_serial_no	getColumnTypeName	VARCHAR	getColumnDisplaySize	45	isNullable	0	getTableName	trade	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	liquidate_detail_serial_no	
+fieldStr: getScale	0	getPrecision	19	getColumnName	liquidate_time	getColumnTypeName	DATETIME	getColumnDisplaySize	19	isNullable	1	getTableName	trade	getColumnType	93	getCatalogName	agent_platform	getColumnClassName	java.sql.Timestamp	getSchemaName		getColumnLabel	liquidate_time	
+fieldStr: getScale	0	getPrecision	45	getColumnName	settle_serial_no	getColumnTypeName	VARCHAR	getColumnDisplaySize	45	isNullable	0	getTableName	trade	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	settle_serial_no	
+fieldStr: getScale	0	getPrecision	45	getColumnName	settle_detail_serial_no	getColumnTypeName	VARCHAR	getColumnDisplaySize	45	isNullable	0	getTableName	trade	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	settle_detail_serial_no	
+fieldStr: getScale	0	getPrecision	19	getColumnName	setle_time	getColumnTypeName	DATETIME	getColumnDisplaySize	19	isNullable	1	getTableName	trade	getColumnType	93	getCatalogName	agent_platform	getColumnClassName	java.sql.Timestamp	getSchemaName		getColumnLabel	setle_time	
+fieldStr: getScale	0	getPrecision	20	getColumnName	fee_split_amount	getColumnTypeName	BIGINT UNSIGNED	getColumnDisplaySize	20	isNullable	0	getTableName	trade	getColumnType	-5	getCatalogName	agent_platform	getColumnClassName	java.math.BigInteger	getSchemaName		getColumnLabel	fee_split_amount	
+fieldStr: getScale	0	getPrecision	20	getColumnName	fee_split_status	getColumnTypeName	VARCHAR	getColumnDisplaySize	20	isNullable	0	getTableName	trade	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	fee_split_status	
+fieldStr: getScale	0	getPrecision	255	getColumnName	fee_split_reason	getColumnTypeName	VARCHAR	getColumnDisplaySize	255	isNullable	0	getTableName	trade	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	fee_split_reason	
+fieldStr: getScale	0	getPrecision	45	getColumnName	agent_no	getColumnTypeName	VARCHAR	getColumnDisplaySize	45	isNullable	0	getTableName	trade	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	agent_no	
+fieldStr: getScale	0	getPrecision	10	getColumnName	trade_type	getColumnTypeName	VARCHAR	getColumnDisplaySize	10	isNullable	0	getTableName	trade	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	trade_type	
+fieldStr: getScale	0	getPrecision	15	getColumnName	trade_way	getColumnTypeName	VARCHAR	getColumnDisplaySize	15	isNullable	0	getTableName	trade	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	trade_way	
+fieldStr: getScale	31	getPrecision	22	getColumnName	merchant_fee_ratio	getColumnTypeName	DOUBLE	getColumnDisplaySize	22	isNullable	0	getTableName	trade	getColumnType	8	getCatalogName	agent_platform	getColumnClassName	java.lang.Double	getSchemaName		getColumnLabel	merchant_fee_ratio	
+fieldStr: getScale	31	getPrecision	22	getColumnName	agent_fee_ratio	getColumnTypeName	DOUBLE	getColumnDisplaySize	22	isNullable	0	getTableName	trade	getColumnType	8	getCatalogName	agent_platform	getColumnClassName	java.lang.Double	getSchemaName		getColumnLabel	agent_fee_ratio	
+fieldStr: getScale	0	getPrecision	50	getColumnName	agent_username	getColumnTypeName	VARCHAR	getColumnDisplaySize	50	isNullable	0	getTableName	trade	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	agent_username	
+fieldStr: getScale	0	getPrecision	45	getColumnName	merchant_no	getColumnTypeName	VARCHAR	getColumnDisplaySize	45	isNullable	0	getTableName	trade	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	merchant_no	
+fieldStr: getScale	0	getPrecision	19	getColumnName	created_at	getColumnTypeName	DATETIME	getColumnDisplaySize	19	isNullable	0	getTableName	trade	getColumnType	93	getCatalogName	agent_platform	getColumnClassName	java.sql.Timestamp	getSchemaName		getColumnLabel	created_at	
+fieldStr: getScale	0	getPrecision	19	getColumnName	updated_at	getColumnTypeName	DATETIME	getColumnDisplaySize	19	isNullable	0	getTableName	trade	getColumnType	93	getCatalogName	agent_platform	getColumnClassName	java.sql.Timestamp	getSchemaName		getColumnLabel	updated_at	
+fieldStr: getScale	0	getPrecision	255	getColumnName	fee_split_detail_reason	getColumnTypeName	VARCHAR	getColumnDisplaySize	255	isNullable	1	getTableName	trade	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	fee_split_detail_reason	
+fieldStr: getScale	0	getPrecision	11	getColumnName	id	getColumnTypeName	INT	getColumnDisplaySize	11	isNullable	0	getTableName	user	getColumnType	4	getCatalogName	agent_platform	getColumnClassName	java.lang.Integer	getSchemaName		getColumnLabel	id	
+fieldStr: getScale	0	getPrecision	25	getColumnName	user_name	getColumnTypeName	VARCHAR	getColumnDisplaySize	25	isNullable	0	getTableName	user	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	user_name	
+fieldStr: getScale	0	getPrecision	50	getColumnName	init_password	getColumnTypeName	VARCHAR	getColumnDisplaySize	50	isNullable	0	getTableName	user	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	init_password	
+fieldStr: getScale	0	getPrecision	50	getColumnName	password	getColumnTypeName	VARCHAR	getColumnDisplaySize	50	isNullable	0	getTableName	user	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	password	
+fieldStr: getScale	0	getPrecision	128	getColumnName	random_key	getColumnTypeName	VARCHAR	getColumnDisplaySize	128	isNullable	0	getTableName	user	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	random_key	
+fieldStr: getScale	0	getPrecision	50	getColumnName	email	getColumnTypeName	VARCHAR	getColumnDisplaySize	50	isNullable	0	getTableName	user	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	email	
+fieldStr: getScale	0	getPrecision	11	getColumnName	phone_no	getColumnTypeName	VARCHAR	getColumnDisplaySize	11	isNullable	0	getTableName	user	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	phone_no	
+fieldStr: getScale	0	getPrecision	100	getColumnName	head_img	getColumnTypeName	VARCHAR	getColumnDisplaySize	100	isNullable	0	getTableName	user	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	head_img	
+fieldStr: getScale	0	getPrecision	11	getColumnName	login_times	getColumnTypeName	INT	getColumnDisplaySize	11	isNullable	0	getTableName	user	getColumnType	4	getCatalogName	agent_platform	getColumnClassName	java.lang.Integer	getSchemaName		getColumnLabel	login_times	
+fieldStr: getScale	0	getPrecision	19	getColumnName	last_login_time	getColumnTypeName	DATETIME	getColumnDisplaySize	19	isNullable	0	getTableName	user	getColumnType	93	getCatalogName	agent_platform	getColumnClassName	java.sql.Timestamp	getSchemaName		getColumnLabel	last_login_time	
+fieldStr: getScale	0	getPrecision	20	getColumnName	last_login_ip	getColumnTypeName	VARCHAR	getColumnDisplaySize	20	isNullable	0	getTableName	user	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	last_login_ip	
+fieldStr: getScale	0	getPrecision	50	getColumnName	agent_role_id	getColumnTypeName	VARCHAR	getColumnDisplaySize	50	isNullable	0	getTableName	user	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	agent_role_id	
+fieldStr: getScale	0	getPrecision	19	getColumnName	register_time	getColumnTypeName	DATETIME	getColumnDisplaySize	19	isNullable	0	getTableName	user	getColumnType	93	getCatalogName	agent_platform	getColumnClassName	java.sql.Timestamp	getSchemaName		getColumnLabel	register_time	
+fieldStr: getScale	0	getPrecision	20	getColumnName	register_ip	getColumnTypeName	VARCHAR	getColumnDisplaySize	20	isNullable	0	getTableName	user	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	register_ip	
+fieldStr: getScale	0	getPrecision	1	getColumnName	status	getColumnTypeName	TINYINT	getColumnDisplaySize	1	isNullable	0	getTableName	user	getColumnType	-7	getCatalogName	agent_platform	getColumnClassName	java.lang.Boolean	getSchemaName		getColumnLabel	status	
+fieldStr: getScale	0	getPrecision	19	getColumnName	create_time	getColumnTypeName	DATETIME	getColumnDisplaySize	19	isNullable	0	getTableName	user	getColumnType	93	getCatalogName	agent_platform	getColumnClassName	java.sql.Timestamp	getSchemaName		getColumnLabel	create_time	
+fieldStr: getScale	0	getPrecision	10	getColumnName	client_type	getColumnTypeName	VARCHAR	getColumnDisplaySize	10	isNullable	0	getTableName	user	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	client_type	
+fieldStr: getScale	0	getPrecision	45	getColumnName	agent_no	getColumnTypeName	VARCHAR	getColumnDisplaySize	45	isNullable	0	getTableName	user	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	agent_no	
+fieldStr: getScale	0	getPrecision	19	getColumnName	created_at	getColumnTypeName	DATETIME	getColumnDisplaySize	19	isNullable	0	getTableName	user	getColumnType	93	getCatalogName	agent_platform	getColumnClassName	java.sql.Timestamp	getSchemaName		getColumnLabel	created_at	
+fieldStr: getScale	0	getPrecision	19	getColumnName	updated_at	getColumnTypeName	DATETIME	getColumnDisplaySize	19	isNullable	0	getTableName	user	getColumnType	93	getCatalogName	agent_platform	getColumnClassName	java.sql.Timestamp	getSchemaName		getColumnLabel	updated_at	
+fieldStr: getScale	0	getPrecision	50	getColumnName	access_token	getColumnTypeName	VARCHAR	getColumnDisplaySize	50	isNullable	1	getTableName	user	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	access_token	
+fieldStr: getScale	0	getPrecision	15	getColumnName	init_type	getColumnTypeName	VARCHAR	getColumnDisplaySize	15	isNullable	1	getTableName	user	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	init_type	
+fieldStr: getScale	0	getPrecision	11	getColumnName	id	getColumnTypeName	INT	getColumnDisplaySize	11	isNullable	0	getTableName	withdraw	getColumnType	4	getCatalogName	agent_platform	getColumnClassName	java.lang.Integer	getSchemaName		getColumnLabel	id	
+fieldStr: getScale	0	getPrecision	50	getColumnName	serial_no	getColumnTypeName	VARCHAR	getColumnDisplaySize	50	isNullable	0	getTableName	withdraw	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	serial_no	
+fieldStr: getScale	0	getPrecision	25	getColumnName	user_id	getColumnTypeName	VARCHAR	getColumnDisplaySize	25	isNullable	0	getTableName	withdraw	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	user_id	
+fieldStr: getScale	0	getPrecision	25	getColumnName	user_name	getColumnTypeName	VARCHAR	getColumnDisplaySize	25	isNullable	0	getTableName	withdraw	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	user_name	
+fieldStr: getScale	0	getPrecision	20	getColumnName	request_amount	getColumnTypeName	BIGINT UNSIGNED	getColumnDisplaySize	20	isNullable	0	getTableName	withdraw	getColumnType	-5	getCatalogName	agent_platform	getColumnClassName	java.math.BigInteger	getSchemaName		getColumnLabel	request_amount	
+fieldStr: getScale	0	getPrecision	15	getColumnName	invoice_type	getColumnTypeName	VARCHAR	getColumnDisplaySize	15	isNullable	0	getTableName	withdraw	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	invoice_type	
+fieldStr: getScale	0	getPrecision	20	getColumnName	amount	getColumnTypeName	BIGINT UNSIGNED	getColumnDisplaySize	20	isNullable	0	getTableName	withdraw	getColumnType	-5	getCatalogName	agent_platform	getColumnClassName	java.math.BigInteger	getSchemaName		getColumnLabel	amount	
+fieldStr: getScale	0	getPrecision	20	getColumnName	single_withdraw_fee_amount	getColumnTypeName	BIGINT UNSIGNED	getColumnDisplaySize	20	isNullable	0	getTableName	withdraw	getColumnType	-5	getCatalogName	agent_platform	getColumnClassName	java.math.BigInteger	getSchemaName		getColumnLabel	single_withdraw_fee_amount	
+fieldStr: getScale	31	getPrecision	22	getColumnName	invoice_tax_ratio	getColumnTypeName	DOUBLE	getColumnDisplaySize	22	isNullable	0	getTableName	withdraw	getColumnType	8	getCatalogName	agent_platform	getColumnClassName	java.lang.Double	getSchemaName		getColumnLabel	invoice_tax_ratio	
+fieldStr: getScale	0	getPrecision	15	getColumnName	status	getColumnTypeName	VARCHAR	getColumnDisplaySize	15	isNullable	0	getTableName	withdraw	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	status	
+fieldStr: getScale	0	getPrecision	25	getColumnName	remark	getColumnTypeName	VARCHAR	getColumnDisplaySize	25	isNullable	0	getTableName	withdraw	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	remark	
+fieldStr: getScale	0	getPrecision	19	getColumnName	apply_time	getColumnTypeName	DATETIME	getColumnDisplaySize	19	isNullable	1	getTableName	withdraw	getColumnType	93	getCatalogName	agent_platform	getColumnClassName	java.sql.Timestamp	getSchemaName		getColumnLabel	apply_time	
+fieldStr: getScale	0	getPrecision	50	getColumnName	express_order_no	getColumnTypeName	VARCHAR	getColumnDisplaySize	50	isNullable	0	getTableName	withdraw	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	express_order_no	
+fieldStr: getScale	0	getPrecision	50	getColumnName	express_company_name	getColumnTypeName	VARCHAR	getColumnDisplaySize	50	isNullable	0	getTableName	withdraw	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	express_company_name	
+fieldStr: getScale	0	getPrecision	20	getColumnName	checker_name	getColumnTypeName	VARCHAR	getColumnDisplaySize	20	isNullable	0	getTableName	withdraw	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	checker_name	
+fieldStr: getScale	0	getPrecision	45	getColumnName	agent_no	getColumnTypeName	VARCHAR	getColumnDisplaySize	45	isNullable	0	getTableName	withdraw	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	agent_no	
+fieldStr: getScale	0	getPrecision	50	getColumnName	agent_username	getColumnTypeName	VARCHAR	getColumnDisplaySize	50	isNullable	0	getTableName	withdraw	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	agent_username	
+fieldStr: getScale	0	getPrecision	50	getColumnName	card_no	getColumnTypeName	VARCHAR	getColumnDisplaySize	50	isNullable	0	getTableName	withdraw	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	card_no	
+fieldStr: getScale	0	getPrecision	25	getColumnName	card_name	getColumnTypeName	VARCHAR	getColumnDisplaySize	25	isNullable	0	getTableName	withdraw	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	card_name	
+fieldStr: getScale	0	getPrecision	25	getColumnName	bank_name	getColumnTypeName	VARCHAR	getColumnDisplaySize	25	isNullable	0	getTableName	withdraw	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	bank_name	
+fieldStr: getScale	0	getPrecision	25	getColumnName	bank_branch_name	getColumnTypeName	VARCHAR	getColumnDisplaySize	25	isNullable	0	getTableName	withdraw	getColumnType	12	getCatalogName	agent_platform	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	bank_branch_name	
+fieldStr: getScale	0	getPrecision	19	getColumnName	created_at	getColumnTypeName	DATETIME	getColumnDisplaySize	19	isNullable	0	getTableName	withdraw	getColumnType	93	getCatalogName	agent_platform	getColumnClassName	java.sql.Timestamp	getSchemaName		getColumnLabel	created_at	
+fieldStr: getScale	0	getPrecision	19	getColumnName	updated_at	getColumnTypeName	DATETIME	getColumnDisplaySize	19	isNullable	0	getTableName	withdraw	getColumnType	93	getCatalogName	agent_platform	getColumnClassName	java.sql.Timestamp	getSchemaName		getColumnLabel	updated_at	
+fieldStr: getScale	0	getPrecision	10	getColumnName	trade_way	getColumnTypeName	VARCHAR	getColumnDisplaySize	10	isNullable	1	getTableName	acquire_trade	getColumnType	12	getCatalogName	recondb	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	trade_way	
+fieldStr: getScale	0	getPrecision	45	getColumnName	customer_no	getColumnTypeName	VARCHAR	getColumnDisplaySize	45	isNullable	0	getTableName	acquire_trade	getColumnType	12	getCatalogName	recondb	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	customer_no	
+fieldStr: getScale	0	getPrecision	20	getColumnName	customer_name	getColumnTypeName	VARCHAR	getColumnDisplaySize	20	isNullable	1	getTableName	acquire_trade	getColumnType	12	getCatalogName	recondb	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	customer_name	
+fieldStr: getScale	0	getPrecision	10	getColumnName	sub_channel_code	getColumnTypeName	VARCHAR	getColumnDisplaySize	10	isNullable	0	getTableName	acquire_trade	getColumnType	12	getCatalogName	recondb	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	sub_channel_code	
+fieldStr: getScale	0	getPrecision	45	getColumnName	channel_trade_no	getColumnTypeName	VARCHAR	getColumnDisplaySize	45	isNullable	0	getTableName	acquire_trade	getColumnType	12	getCatalogName	recondb	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	channel_trade_no	
+fieldStr: getScale	0	getPrecision	4	getColumnName	status	getColumnTypeName	TINYINT	getColumnDisplaySize	4	isNullable	0	getTableName	acquire_trade	getColumnType	-6	getCatalogName	recondb	getColumnClassName	java.lang.Integer	getSchemaName		getColumnLabel	status	
+fieldStr: getScale	0	getPrecision	45	getColumnName	batch_no	getColumnTypeName	VARCHAR	getColumnDisplaySize	45	isNullable	0	getTableName	acquire_trade	getColumnType	12	getCatalogName	recondb	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	batch_no	
+fieldStr: getScale	0	getPrecision	8	getColumnName	trade_day	getColumnTypeName	VARCHAR	getColumnDisplaySize	8	isNullable	0	getTableName	acquire_trade	getColumnType	12	getCatalogName	recondb	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	trade_day	
+fieldStr: getScale	0	getPrecision	19	getColumnName	recon_date	getColumnTypeName	TIMESTAMP	getColumnDisplaySize	19	isNullable	0	getTableName	acquire_trade	getColumnType	93	getCatalogName	recondb	getColumnClassName	java.sql.Timestamp	getSchemaName		getColumnLabel	recon_date	
+fieldStr: getScale	0	getPrecision	10	getColumnName	channel_code	getColumnTypeName	VARCHAR	getColumnDisplaySize	10	isNullable	0	getTableName	acquire_trade	getColumnType	12	getCatalogName	recondb	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	channel_code	
+fieldStr: getScale	0	getPrecision	45	getColumnName	recon_no	getColumnTypeName	VARCHAR	getColumnDisplaySize	45	isNullable	0	getTableName	acquire_trade	getColumnType	12	getCatalogName	recondb	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	recon_no	
+fieldStr: getScale	0	getPrecision	45	getColumnName	trade_no	getColumnTypeName	VARCHAR	getColumnDisplaySize	45	isNullable	0	getTableName	acquire_trade	getColumnType	12	getCatalogName	recondb	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	trade_no	
+fieldStr: getScale	0	getPrecision	20	getColumnName	amount	getColumnTypeName	BIGINT UNSIGNED	getColumnDisplaySize	20	isNullable	0	getTableName	acquire_trade	getColumnType	-5	getCatalogName	recondb	getColumnClassName	java.math.BigInteger	getSchemaName		getColumnLabel	amount	
+fieldStr: getScale	0	getPrecision	20	getColumnName	fee	getColumnTypeName	BIGINT UNSIGNED	getColumnDisplaySize	20	isNullable	0	getTableName	acquire_trade	getColumnType	-5	getCatalogName	recondb	getColumnClassName	java.math.BigInteger	getSchemaName		getColumnLabel	fee	
+fieldStr: getScale	0	getPrecision	19	getColumnName	trade_date	getColumnTypeName	TIMESTAMP	getColumnDisplaySize	19	isNullable	0	getTableName	acquire_trade	getColumnType	93	getCatalogName	recondb	getColumnClassName	java.sql.Timestamp	getSchemaName		getColumnLabel	trade_date	
+fieldStr: getScale	0	getPrecision	45	getColumnName	customer_trade_no	getColumnTypeName	VARCHAR	getColumnDisplaySize	45	isNullable	0	getTableName	acquire_trade	getColumnType	12	getCatalogName	recondb	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	customer_trade_no	
+fieldStr: getScale	0	getPrecision	20	getColumnName	id	getColumnTypeName	BIGINT UNSIGNED	getColumnDisplaySize	20	isNullable	0	getTableName	acquire_trade	getColumnType	-5	getCatalogName	recondb	getColumnClassName	java.math.BigInteger	getSchemaName		getColumnLabel	id	
+fieldStr: getScale	0	getPrecision	19	getColumnName	created_at	getColumnTypeName	TIMESTAMP	getColumnDisplaySize	19	isNullable	0	getTableName	acquire_trade	getColumnType	93	getCatalogName	recondb	getColumnClassName	java.sql.Timestamp	getSchemaName		getColumnLabel	created_at	
+fieldStr: getScale	0	getPrecision	19	getColumnName	updated_at	getColumnTypeName	TIMESTAMP	getColumnDisplaySize	19	isNullable	0	getTableName	acquire_trade	getColumnType	93	getCatalogName	recondb	getColumnClassName	java.sql.Timestamp	getSchemaName		getColumnLabel	updated_at	
+fieldStr: getScale	0	getPrecision	19	getColumnName	deleted_at	getColumnTypeName	TIMESTAMP	getColumnDisplaySize	19	isNullable	0	getTableName	acquire_trade	getColumnType	93	getCatalogName	recondb	getColumnClassName	java.sql.Timestamp	getSchemaName		getColumnLabel	deleted_at	
+fieldStr: getScale	0	getPrecision	20	getColumnName	card_name	getColumnTypeName	VARCHAR	getColumnDisplaySize	20	isNullable	1	getTableName	agentpay_trade	getColumnType	12	getCatalogName	recondb	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	card_name	
+fieldStr: getScale	0	getPrecision	20	getColumnName	card_no	getColumnTypeName	VARCHAR	getColumnDisplaySize	20	isNullable	1	getTableName	agentpay_trade	getColumnType	12	getCatalogName	recondb	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	card_no	
+fieldStr: getScale	0	getPrecision	45	getColumnName	customer_no	getColumnTypeName	VARCHAR	getColumnDisplaySize	45	isNullable	0	getTableName	agentpay_trade	getColumnType	12	getCatalogName	recondb	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	customer_no	
+fieldStr: getScale	0	getPrecision	20	getColumnName	customer_name	getColumnTypeName	VARCHAR	getColumnDisplaySize	20	isNullable	1	getTableName	agentpay_trade	getColumnType	12	getCatalogName	recondb	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	customer_name	
+fieldStr: getScale	0	getPrecision	10	getColumnName	sub_channel_code	getColumnTypeName	VARCHAR	getColumnDisplaySize	10	isNullable	0	getTableName	agentpay_trade	getColumnType	12	getCatalogName	recondb	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	sub_channel_code	
+fieldStr: getScale	0	getPrecision	45	getColumnName	channel_trade_no	getColumnTypeName	VARCHAR	getColumnDisplaySize	45	isNullable	0	getTableName	agentpay_trade	getColumnType	12	getCatalogName	recondb	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	channel_trade_no	
+fieldStr: getScale	0	getPrecision	4	getColumnName	status	getColumnTypeName	TINYINT	getColumnDisplaySize	4	isNullable	0	getTableName	agentpay_trade	getColumnType	-6	getCatalogName	recondb	getColumnClassName	java.lang.Integer	getSchemaName		getColumnLabel	status	
+fieldStr: getScale	0	getPrecision	45	getColumnName	batch_no	getColumnTypeName	VARCHAR	getColumnDisplaySize	45	isNullable	0	getTableName	agentpay_trade	getColumnType	12	getCatalogName	recondb	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	batch_no	
+fieldStr: getScale	0	getPrecision	8	getColumnName	trade_day	getColumnTypeName	VARCHAR	getColumnDisplaySize	8	isNullable	0	getTableName	agentpay_trade	getColumnType	12	getCatalogName	recondb	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	trade_day	
+fieldStr: getScale	0	getPrecision	19	getColumnName	recon_date	getColumnTypeName	TIMESTAMP	getColumnDisplaySize	19	isNullable	0	getTableName	agentpay_trade	getColumnType	93	getCatalogName	recondb	getColumnClassName	java.sql.Timestamp	getSchemaName		getColumnLabel	recon_date	
+fieldStr: getScale	0	getPrecision	10	getColumnName	channel_code	getColumnTypeName	VARCHAR	getColumnDisplaySize	10	isNullable	0	getTableName	agentpay_trade	getColumnType	12	getCatalogName	recondb	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	channel_code	
+fieldStr: getScale	0	getPrecision	45	getColumnName	recon_no	getColumnTypeName	VARCHAR	getColumnDisplaySize	45	isNullable	0	getTableName	agentpay_trade	getColumnType	12	getCatalogName	recondb	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	recon_no	
+fieldStr: getScale	0	getPrecision	45	getColumnName	trade_no	getColumnTypeName	VARCHAR	getColumnDisplaySize	45	isNullable	0	getTableName	agentpay_trade	getColumnType	12	getCatalogName	recondb	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	trade_no	
+fieldStr: getScale	0	getPrecision	20	getColumnName	amount	getColumnTypeName	BIGINT UNSIGNED	getColumnDisplaySize	20	isNullable	0	getTableName	agentpay_trade	getColumnType	-5	getCatalogName	recondb	getColumnClassName	java.math.BigInteger	getSchemaName		getColumnLabel	amount	
+fieldStr: getScale	0	getPrecision	20	getColumnName	fee	getColumnTypeName	BIGINT UNSIGNED	getColumnDisplaySize	20	isNullable	0	getTableName	agentpay_trade	getColumnType	-5	getCatalogName	recondb	getColumnClassName	java.math.BigInteger	getSchemaName		getColumnLabel	fee	
+fieldStr: getScale	0	getPrecision	19	getColumnName	trade_date	getColumnTypeName	TIMESTAMP	getColumnDisplaySize	19	isNullable	0	getTableName	agentpay_trade	getColumnType	93	getCatalogName	recondb	getColumnClassName	java.sql.Timestamp	getSchemaName		getColumnLabel	trade_date	
+fieldStr: getScale	0	getPrecision	45	getColumnName	customer_trade_no	getColumnTypeName	VARCHAR	getColumnDisplaySize	45	isNullable	0	getTableName	agentpay_trade	getColumnType	12	getCatalogName	recondb	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	customer_trade_no	
+fieldStr: getScale	0	getPrecision	20	getColumnName	id	getColumnTypeName	BIGINT UNSIGNED	getColumnDisplaySize	20	isNullable	0	getTableName	agentpay_trade	getColumnType	-5	getCatalogName	recondb	getColumnClassName	java.math.BigInteger	getSchemaName		getColumnLabel	id	
+fieldStr: getScale	0	getPrecision	19	getColumnName	created_at	getColumnTypeName	TIMESTAMP	getColumnDisplaySize	19	isNullable	0	getTableName	agentpay_trade	getColumnType	93	getCatalogName	recondb	getColumnClassName	java.sql.Timestamp	getSchemaName		getColumnLabel	created_at	
+fieldStr: getScale	0	getPrecision	19	getColumnName	updated_at	getColumnTypeName	TIMESTAMP	getColumnDisplaySize	19	isNullable	0	getTableName	agentpay_trade	getColumnType	93	getCatalogName	recondb	getColumnClassName	java.sql.Timestamp	getSchemaName		getColumnLabel	updated_at	
+fieldStr: getScale	0	getPrecision	19	getColumnName	deleted_at	getColumnTypeName	TIMESTAMP	getColumnDisplaySize	19	isNullable	0	getTableName	agentpay_trade	getColumnType	93	getCatalogName	recondb	getColumnClassName	java.sql.Timestamp	getSchemaName		getColumnLabel	deleted_at	
+fieldStr: getScale	0	getPrecision	20	getColumnName	service_trade_id	getColumnTypeName	BIGINT UNSIGNED	getColumnDisplaySize	20	isNullable	0	getTableName	recon_exp	getColumnType	-5	getCatalogName	recondb	getColumnClassName	java.math.BigInteger	getSchemaName		getColumnLabel	service_trade_id	
+fieldStr: getScale	0	getPrecision	20	getColumnName	extra_service_trade_id	getColumnTypeName	BIGINT UNSIGNED	getColumnDisplaySize	20	isNullable	0	getTableName	recon_exp	getColumnType	-5	getCatalogName	recondb	getColumnClassName	java.math.BigInteger	getSchemaName		getColumnLabel	extra_service_trade_id	
+fieldStr: getScale	0	getPrecision	10	getColumnName	channel_code	getColumnTypeName	VARCHAR	getColumnDisplaySize	10	isNullable	0	getTableName	recon_exp	getColumnType	12	getCatalogName	recondb	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	channel_code	
+fieldStr: getScale	0	getPrecision	45	getColumnName	batch_no	getColumnTypeName	VARCHAR	getColumnDisplaySize	45	isNullable	0	getTableName	recon_exp	getColumnType	12	getCatalogName	recondb	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	batch_no	
+fieldStr: getScale	0	getPrecision	3	getColumnName	service_type	getColumnTypeName	VARCHAR	getColumnDisplaySize	3	isNullable	0	getTableName	recon_exp	getColumnType	12	getCatalogName	recondb	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	service_type	
+fieldStr: getScale	0	getPrecision	8	getColumnName	trade_day	getColumnTypeName	VARCHAR	getColumnDisplaySize	8	isNullable	0	getTableName	recon_exp	getColumnType	12	getCatalogName	recondb	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	trade_day	
+fieldStr: getScale	0	getPrecision	45	getColumnName	operator_name	getColumnTypeName	VARCHAR	getColumnDisplaySize	45	isNullable	1	getTableName	recon_exp	getColumnType	12	getCatalogName	recondb	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	operator_name	
+fieldStr: getScale	0	getPrecision	4	getColumnName	status	getColumnTypeName	TINYINT	getColumnDisplaySize	4	isNullable	0	getTableName	recon_exp	getColumnType	-6	getCatalogName	recondb	getColumnClassName	java.lang.Integer	getSchemaName		getColumnLabel	status	
+fieldStr: getScale	0	getPrecision	1	getColumnName	exp_code	getColumnTypeName	TINYINT	getColumnDisplaySize	1	isNullable	0	getTableName	recon_exp	getColumnType	-7	getCatalogName	recondb	getColumnClassName	java.lang.Boolean	getSchemaName		getColumnLabel	exp_code	
+fieldStr: getScale	0	getPrecision	45	getColumnName	exp_reason	getColumnTypeName	VARCHAR	getColumnDisplaySize	45	isNullable	1	getTableName	recon_exp	getColumnType	12	getCatalogName	recondb	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	exp_reason	
+fieldStr: getScale	0	getPrecision	19	getColumnName	adjust_date	getColumnTypeName	TIMESTAMP	getColumnDisplaySize	19	isNullable	0	getTableName	recon_exp	getColumnType	93	getCatalogName	recondb	getColumnClassName	java.sql.Timestamp	getSchemaName		getColumnLabel	adjust_date	
+fieldStr: getScale	0	getPrecision	45	getColumnName	adjust_reason	getColumnTypeName	VARCHAR	getColumnDisplaySize	45	isNullable	1	getTableName	recon_exp	getColumnType	12	getCatalogName	recondb	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	adjust_reason	
+fieldStr: getScale	0	getPrecision	20	getColumnName	id	getColumnTypeName	BIGINT UNSIGNED	getColumnDisplaySize	20	isNullable	0	getTableName	recon_exp	getColumnType	-5	getCatalogName	recondb	getColumnClassName	java.math.BigInteger	getSchemaName		getColumnLabel	id	
+fieldStr: getScale	0	getPrecision	19	getColumnName	created_at	getColumnTypeName	TIMESTAMP	getColumnDisplaySize	19	isNullable	0	getTableName	recon_exp	getColumnType	93	getCatalogName	recondb	getColumnClassName	java.sql.Timestamp	getSchemaName		getColumnLabel	created_at	
+fieldStr: getScale	0	getPrecision	19	getColumnName	updated_at	getColumnTypeName	TIMESTAMP	getColumnDisplaySize	19	isNullable	0	getTableName	recon_exp	getColumnType	93	getCatalogName	recondb	getColumnClassName	java.sql.Timestamp	getSchemaName		getColumnLabel	updated_at	
+fieldStr: getScale	0	getPrecision	19	getColumnName	deleted_at	getColumnTypeName	TIMESTAMP	getColumnDisplaySize	19	isNullable	0	getTableName	recon_exp	getColumnType	93	getCatalogName	recondb	getColumnClassName	java.sql.Timestamp	getSchemaName		getColumnLabel	deleted_at	
+fieldStr: getScale	0	getPrecision	10	getColumnName	total_count	getColumnTypeName	INT UNSIGNED	getColumnDisplaySize	10	isNullable	0	getTableName	recon_import	getColumnType	4	getCatalogName	recondb	getColumnClassName	java.lang.Long	getSchemaName		getColumnLabel	total_count	
+fieldStr: getScale	0	getPrecision	64	getColumnName	check_code	getColumnTypeName	VARCHAR	getColumnDisplaySize	64	isNullable	1	getTableName	recon_import	getColumnType	12	getCatalogName	recondb	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	check_code	
+fieldStr: getScale	0	getPrecision	4	getColumnName	operator_type	getColumnTypeName	TINYINT	getColumnDisplaySize	4	isNullable	0	getTableName	recon_import	getColumnType	-6	getCatalogName	recondb	getColumnClassName	java.lang.Integer	getSchemaName		getColumnLabel	operator_type	
+fieldStr: getScale	0	getPrecision	20	getColumnName	id	getColumnTypeName	BIGINT UNSIGNED	getColumnDisplaySize	20	isNullable	0	getTableName	recon_import	getColumnType	-5	getCatalogName	recondb	getColumnClassName	java.math.BigInteger	getSchemaName		getColumnLabel	id	
+fieldStr: getScale	0	getPrecision	19	getColumnName	created_at	getColumnTypeName	TIMESTAMP	getColumnDisplaySize	19	isNullable	0	getTableName	recon_import	getColumnType	93	getCatalogName	recondb	getColumnClassName	java.sql.Timestamp	getSchemaName		getColumnLabel	created_at	
+fieldStr: getScale	0	getPrecision	19	getColumnName	updated_at	getColumnTypeName	TIMESTAMP	getColumnDisplaySize	19	isNullable	0	getTableName	recon_import	getColumnType	93	getCatalogName	recondb	getColumnClassName	java.sql.Timestamp	getSchemaName		getColumnLabel	updated_at	
+fieldStr: getScale	0	getPrecision	19	getColumnName	deleted_at	getColumnTypeName	TIMESTAMP	getColumnDisplaySize	19	isNullable	0	getTableName	recon_import	getColumnType	93	getCatalogName	recondb	getColumnClassName	java.sql.Timestamp	getSchemaName		getColumnLabel	deleted_at	
+fieldStr: getScale	0	getPrecision	45	getColumnName	batch_no	getColumnTypeName	VARCHAR	getColumnDisplaySize	45	isNullable	0	getTableName	recon_import	getColumnType	12	getCatalogName	recondb	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	batch_no	
+fieldStr: getScale	0	getPrecision	8	getColumnName	trade_day	getColumnTypeName	VARCHAR	getColumnDisplaySize	8	isNullable	0	getTableName	recon_import	getColumnType	12	getCatalogName	recondb	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	trade_day	
+fieldStr: getScale	0	getPrecision	10	getColumnName	channel_code	getColumnTypeName	VARCHAR	getColumnDisplaySize	10	isNullable	0	getTableName	recon_import	getColumnType	12	getCatalogName	recondb	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	channel_code	
+fieldStr: getScale	0	getPrecision	3	getColumnName	service_type	getColumnTypeName	VARCHAR	getColumnDisplaySize	3	isNullable	0	getTableName	recon_import	getColumnType	12	getCatalogName	recondb	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	service_type	
+fieldStr: getScale	0	getPrecision	4	getColumnName	status	getColumnTypeName	TINYINT	getColumnDisplaySize	4	isNullable	0	getTableName	recon_import	getColumnType	-6	getCatalogName	recondb	getColumnClassName	java.lang.Integer	getSchemaName		getColumnLabel	status	
+fieldStr: getScale	0	getPrecision	45	getColumnName	exp_reason	getColumnTypeName	VARCHAR	getColumnDisplaySize	45	isNullable	1	getTableName	recon_import	getColumnType	12	getCatalogName	recondb	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	exp_reason	
+fieldStr: getScale	0	getPrecision	4	getColumnName	try_times	getColumnTypeName	TINYINT	getColumnDisplaySize	4	isNullable	0	getTableName	recon_import	getColumnType	-6	getCatalogName	recondb	getColumnClassName	java.lang.Integer	getSchemaName		getColumnLabel	try_times	
+fieldStr: getScale	0	getPrecision	19	getColumnName	start_at	getColumnTypeName	TIMESTAMP	getColumnDisplaySize	19	isNullable	0	getTableName	recon_import	getColumnType	93	getCatalogName	recondb	getColumnClassName	java.sql.Timestamp	getSchemaName		getColumnLabel	start_at	
+fieldStr: getScale	0	getPrecision	19	getColumnName	end_at	getColumnTypeName	TIMESTAMP	getColumnDisplaySize	19	isNullable	0	getTableName	recon_import	getColumnType	93	getCatalogName	recondb	getColumnClassName	java.sql.Timestamp	getSchemaName		getColumnLabel	end_at	
+fieldStr: getScale	0	getPrecision	4	getColumnName	operator_type	getColumnTypeName	TINYINT	getColumnDisplaySize	4	isNullable	0	getTableName	recon_result	getColumnType	-6	getCatalogName	recondb	getColumnClassName	java.lang.Integer	getSchemaName		getColumnLabel	operator_type	
+fieldStr: getScale	0	getPrecision	10	getColumnName	channel_trade_count	getColumnTypeName	INT UNSIGNED	getColumnDisplaySize	10	isNullable	0	getTableName	recon_result	getColumnType	4	getCatalogName	recondb	getColumnClassName	java.lang.Long	getSchemaName		getColumnLabel	channel_trade_count	
+fieldStr: getScale	0	getPrecision	20	getColumnName	channel_trade_amount	getColumnTypeName	BIGINT UNSIGNED	getColumnDisplaySize	20	isNullable	0	getTableName	recon_result	getColumnType	-5	getCatalogName	recondb	getColumnClassName	java.math.BigInteger	getSchemaName		getColumnLabel	channel_trade_amount	
+fieldStr: getScale	0	getPrecision	20	getColumnName	channel_trade_fee	getColumnTypeName	BIGINT UNSIGNED	getColumnDisplaySize	20	isNullable	0	getTableName	recon_result	getColumnType	-5	getCatalogName	recondb	getColumnClassName	java.math.BigInteger	getSchemaName		getColumnLabel	channel_trade_fee	
+fieldStr: getScale	0	getPrecision	10	getColumnName	platform_trade_count	getColumnTypeName	INT UNSIGNED	getColumnDisplaySize	10	isNullable	0	getTableName	recon_result	getColumnType	4	getCatalogName	recondb	getColumnClassName	java.lang.Long	getSchemaName		getColumnLabel	platform_trade_count	
+fieldStr: getScale	0	getPrecision	20	getColumnName	platform_trade_amount	getColumnTypeName	BIGINT UNSIGNED	getColumnDisplaySize	20	isNullable	0	getTableName	recon_result	getColumnType	-5	getCatalogName	recondb	getColumnClassName	java.math.BigInteger	getSchemaName		getColumnLabel	platform_trade_amount	
+fieldStr: getScale	0	getPrecision	20	getColumnName	platform_trade_fee	getColumnTypeName	BIGINT UNSIGNED	getColumnDisplaySize	20	isNullable	0	getTableName	recon_result	getColumnType	-5	getCatalogName	recondb	getColumnClassName	java.math.BigInteger	getSchemaName		getColumnLabel	platform_trade_fee	
+fieldStr: getScale	0	getPrecision	10	getColumnName	platform_channel_code	getColumnTypeName	VARCHAR	getColumnDisplaySize	10	isNullable	0	getTableName	recon_result	getColumnType	12	getCatalogName	recondb	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	platform_channel_code	
+fieldStr: getScale	0	getPrecision	10	getColumnName	exp_count	getColumnTypeName	INT UNSIGNED	getColumnDisplaySize	10	isNullable	0	getTableName	recon_result	getColumnType	4	getCatalogName	recondb	getColumnClassName	java.lang.Long	getSchemaName		getColumnLabel	exp_count	
+fieldStr: getScale	0	getPrecision	20	getColumnName	exp_amount	getColumnTypeName	BIGINT UNSIGNED	getColumnDisplaySize	20	isNullable	0	getTableName	recon_result	getColumnType	-5	getCatalogName	recondb	getColumnClassName	java.math.BigInteger	getSchemaName		getColumnLabel	exp_amount	
+fieldStr: getScale	0	getPrecision	20	getColumnName	id	getColumnTypeName	BIGINT UNSIGNED	getColumnDisplaySize	20	isNullable	0	getTableName	recon_result	getColumnType	-5	getCatalogName	recondb	getColumnClassName	java.math.BigInteger	getSchemaName		getColumnLabel	id	
+fieldStr: getScale	0	getPrecision	19	getColumnName	created_at	getColumnTypeName	TIMESTAMP	getColumnDisplaySize	19	isNullable	0	getTableName	recon_result	getColumnType	93	getCatalogName	recondb	getColumnClassName	java.sql.Timestamp	getSchemaName		getColumnLabel	created_at	
+fieldStr: getScale	0	getPrecision	19	getColumnName	updated_at	getColumnTypeName	TIMESTAMP	getColumnDisplaySize	19	isNullable	0	getTableName	recon_result	getColumnType	93	getCatalogName	recondb	getColumnClassName	java.sql.Timestamp	getSchemaName		getColumnLabel	updated_at	
+fieldStr: getScale	0	getPrecision	19	getColumnName	deleted_at	getColumnTypeName	TIMESTAMP	getColumnDisplaySize	19	isNullable	0	getTableName	recon_result	getColumnType	93	getCatalogName	recondb	getColumnClassName	java.sql.Timestamp	getSchemaName		getColumnLabel	deleted_at	
+fieldStr: getScale	0	getPrecision	45	getColumnName	batch_no	getColumnTypeName	VARCHAR	getColumnDisplaySize	45	isNullable	0	getTableName	recon_result	getColumnType	12	getCatalogName	recondb	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	batch_no	
+fieldStr: getScale	0	getPrecision	8	getColumnName	trade_day	getColumnTypeName	VARCHAR	getColumnDisplaySize	8	isNullable	0	getTableName	recon_result	getColumnType	12	getCatalogName	recondb	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	trade_day	
+fieldStr: getScale	0	getPrecision	10	getColumnName	channel_code	getColumnTypeName	VARCHAR	getColumnDisplaySize	10	isNullable	0	getTableName	recon_result	getColumnType	12	getCatalogName	recondb	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	channel_code	
+fieldStr: getScale	0	getPrecision	3	getColumnName	service_type	getColumnTypeName	VARCHAR	getColumnDisplaySize	3	isNullable	0	getTableName	recon_result	getColumnType	12	getCatalogName	recondb	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	service_type	
+fieldStr: getScale	0	getPrecision	4	getColumnName	status	getColumnTypeName	TINYINT	getColumnDisplaySize	4	isNullable	0	getTableName	recon_result	getColumnType	-6	getCatalogName	recondb	getColumnClassName	java.lang.Integer	getSchemaName		getColumnLabel	status	
+fieldStr: getScale	0	getPrecision	45	getColumnName	exp_reason	getColumnTypeName	VARCHAR	getColumnDisplaySize	45	isNullable	1	getTableName	recon_result	getColumnType	12	getCatalogName	recondb	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	exp_reason	
+fieldStr: getScale	0	getPrecision	4	getColumnName	try_times	getColumnTypeName	TINYINT	getColumnDisplaySize	4	isNullable	0	getTableName	recon_result	getColumnType	-6	getCatalogName	recondb	getColumnClassName	java.lang.Integer	getSchemaName		getColumnLabel	try_times	
+fieldStr: getScale	0	getPrecision	19	getColumnName	start_at	getColumnTypeName	TIMESTAMP	getColumnDisplaySize	19	isNullable	0	getTableName	recon_result	getColumnType	93	getCatalogName	recondb	getColumnClassName	java.sql.Timestamp	getSchemaName		getColumnLabel	start_at	
+fieldStr: getScale	0	getPrecision	19	getColumnName	end_at	getColumnTypeName	TIMESTAMP	getColumnDisplaySize	19	isNullable	0	getTableName	recon_result	getColumnType	93	getCatalogName	recondb	getColumnClassName	java.sql.Timestamp	getSchemaName		getColumnLabel	end_at	
+fieldStr: getScale	0	getPrecision	128	getColumnName	variable	getColumnTypeName	VARCHAR	getColumnDisplaySize	128	isNullable	0	getTableName	sys_config	getColumnType	12	getCatalogName	sys	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	variable	
+fieldStr: getScale	0	getPrecision	128	getColumnName	value	getColumnTypeName	VARCHAR	getColumnDisplaySize	128	isNullable	1	getTableName	sys_config	getColumnType	12	getCatalogName	sys	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	value	
+fieldStr: getScale	0	getPrecision	19	getColumnName	set_time	getColumnTypeName	TIMESTAMP	getColumnDisplaySize	19	isNullable	0	getTableName	sys_config	getColumnType	93	getCatalogName	sys	getColumnClassName	java.sql.Timestamp	getSchemaName		getColumnLabel	set_time	
+fieldStr: getScale	0	getPrecision	128	getColumnName	set_by	getColumnTypeName	VARCHAR	getColumnDisplaySize	128	isNullable	1	getTableName	sys_config	getColumnType	12	getCatalogName	sys	getColumnClassName	java.lang.String	getSchemaName		getColumnLabel	set_by	
